@@ -132,10 +132,10 @@ export default function Hero() {
     <div ref={scope}>
       <div className="w-full flex items-end h-[10vh] translate-y-[40vh]">
         <div className="box-3 flex items-center space-x-[110px] mx-auto">
-          <div className="box-1 text-foreground text-7xl font-serif">
+          <div className="box-1 opacity-0 translate-x-[50px] text-foreground text-7xl font-serif">
             Learn Here,
           </div>
-          <div className="box-2 text-aisa-blue text-7xl font-serif">
+          <div className="box-2 opacity-0 translate-x-[50px] text-aisa-blue text-7xl font-serif">
             Belong Everywhere
           </div>
         </div>
