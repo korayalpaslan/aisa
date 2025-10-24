@@ -36,12 +36,12 @@ export default function Hero() {
 
   useEffect(() => {
     const runAnimation = async () => {
-      animate(".box-1", { opacity: 0, x: 50 });
-      animate(".box-2", { opacity: 0, x: -50 });
-      animate(".box-3", { y: 0 });
-      animate(".box-4", { opacity: 0, y: 100 });
+      // animate(".box-1", { opacity: 0, x: 50 });
+      // animate(".box-2", { opacity: 0, x: -50 });
+      // animate(".box-3", { y: 0 });
+      // animate(".box-4", { opacity: 0, y: 100 });
 
-      await new Promise((resolve) => setTimeout(resolve, 100)); // small delay so DOM renders
+      // await new Promise((resolve) => setTimeout(resolve, 100)); // small delay so DOM renders
       // 1️⃣ Animate box-1 and box-2 first
       await animate([
         [
