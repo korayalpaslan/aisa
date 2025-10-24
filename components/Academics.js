@@ -14,7 +14,7 @@ export default function Academics() {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="font-serif text-5xl text-right h-[50vh] sticky top-16 mb-20"
+          className="font-serif text-5xl text-right h-[50vh] sticky top-16 mb-32"
         >
           Discover your place at <br></br>AISA
         </motion.h1>
@@ -39,8 +39,8 @@ export default function Academics() {
               </div>
             </div>
           </li>
-          <li className="h-[50vh] translate-x-[290px] w-auto flex items-center sticky top-40">
-            <div className="h-[400px] w-[320px] rounded-md bg-aisa-yellow flex flex-col relative">
+          <li className="h-[50vh] translate-x-[275px] w-auto flex items-center sticky top-40">
+            <div className="h-[400px] w-[350px] rounded-md bg-aisa-yellow flex flex-col relative">
               <Image
                 src="/images/primary.jpg"
                 width={320}
@@ -59,7 +59,7 @@ export default function Academics() {
               </div>
             </div>
           </li>
-          <li className="h-[50vh] translate-x-[580px] w-auto flex items-center sticky top-48">
+          <li className="h-[50vh] translate-x-[550px] w-auto flex items-center sticky top-48">
             <div className="h-[400px] w-[350px] rounded-md bg-aisa-red flex flex-col text-background relative">
               <Image
                 src="/images/middle.jpg"
@@ -79,7 +79,7 @@ export default function Academics() {
               </div>
             </div>
           </li>
-          <li className="h-[50vh] translate-x-[820px] w-auto flex items-center sticky top-56 cursor-pointer">
+          <li className="h-[50vh] translate-x-[825px] w-auto flex items-center sticky top-56 cursor-pointer">
             <div className="h-[400px] w-[350px] rounded-md bg-aisa-green flex flex-col text-background relative">
               <Image
                 src="/images/high.jpg"

@@ -16,7 +16,7 @@ export default function Navbar() {
   }, [animate]);
   return (
     <div ref={scope}>
-      <div className="box-1 px-10 flex justify-between items-center h-32">
+      <div className="box-1 px-10 flex justify-between items-center h-24">
         <Image
           src="/images/logo.png"
           width={300}

@@ -1,6 +1,12 @@
 "use client";
 import React, { useEffect, useRef } from "react";
-import { useAnimate, useScroll, useTransform, motion } from "motion/react";
+import {
+  useAnimate,
+  useScroll,
+  useTransform,
+  motion,
+  useSpring,
+} from "motion/react";
 import Image from "next/image";
 
 export default function Hero() {
@@ -11,6 +17,9 @@ export default function Hero() {
     offset: ["start start", "end end"],
   });
 
+  // 🧩 Global scroll (entire page)
+  const { scrollYProgress: pageScroll } = useScroll();
+
   const scale3 = useTransform(scrollYProgress, [0, 1], [1, 3]);
   const scale4 = useTransform(scrollYProgress, [0, 1], [1, 4]);
   const scale5 = useTransform(scrollYProgress, [0, 1], [1, 5]);
@@ -19,20 +28,20 @@ export default function Hero() {
   const scale8 = useTransform(scrollYProgress, [0, 1], [1, 8]);
   const scale9 = useTransform(scrollYProgress, [0, 1], [1, 9]);
 
-  const overlapOpacity = useTransform(scrollYProgress, [0.9, 1], [0, 1]);
-  const overlapY = useTransform(scrollYProgress, [0.9, 1], ["90vh", "0vh"]);
-
-  // const textOpacity = useTransform(scrollYProgress, [0.9, 1], [0, 1]);
-  // const textY = useTransform(scrollYProgress, [0.9, 1], ["40px", "0px"]);
-  const textOpacity = useTransform(scrollYProgress, [0.8, 0.9, 1], [0, 1, 1]);
-  const textY = useTransform(
-    scrollYProgress,
-    [0.8, 0.9, 1],
-    ["40px", "0px", "0px"]
-  );
+  // 🎬 Overlap starts only after scaling finishes
+  const overlapOpacity = useTransform(scrollYProgress, [0.8, 1], [0, 1]);
+  const overlapY = useTransform(scrollYProgress, [0.8, 1], ["100vh", "0vh"]);
+  const textOpacity = useTransform(scrollYProgress, [0.85, 1], [0, 1]);
+  const textY = useTransform(scrollYProgress, [0.85, 1], ["40px", "0px"]);
 
   useEffect(() => {
     const runAnimation = async () => {
+      animate(".box-1", { opacity: 0, x: 50 });
+      animate(".box-2", { opacity: 0, x: -50 });
+      animate(".box-3", { y: 0 });
+      animate(".box-4", { opacity: 0, y: 100 });
+
+      await new Promise((resolve) => setTimeout(resolve, 100)); // small delay so DOM renders
       // 1️⃣ Animate box-1 and box-2 first
       await animate([
         [
@@ -132,7 +141,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="h-[300vh] relative box-4 opacity-0 z-10" ref={container}>
+      <div className="h-[400vh] relative box-4 opacity-0 z-10" ref={container}>
         <div className="sticky overflow-hidden h-screen top-0 flex justify-center items-start ">
           {pictures.map((picture) => {
             return (
@@ -164,7 +173,7 @@ export default function Hero() {
       </div>
 
       <motion.div
-        className="h-screen bg-foreground/80 flex flex-col items-center justify-center "
+        className="h-screen bg-foreground/80 flex flex-col items-center justify-center"
         style={{
           opacity: overlapOpacity,
           y: overlapY,
