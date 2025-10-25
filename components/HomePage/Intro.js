@@ -10,7 +10,7 @@ export default function Intro() {
     <div className="bg-foreground">
       <div
         ref={ref}
-        className="py-40 space-y-5 max-w-4xl mx-auto text-background"
+        className="py-40 space-y-5 max-w-4xl mx-auto px-6 text-background"
       >
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
@@ -24,7 +24,7 @@ export default function Intro() {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
-          className="text-3xl font-serif text-center"
+          className="text-2xl lg:text-3xl font-serif text-center"
         >
            AISA, American PreK-12 international school, offers international
           programs, empowering students to excel academically and gain admission

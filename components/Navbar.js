@@ -22,7 +22,7 @@ export default function Navbar() {
           width={300}
           height={300}
           alt="logo"
-          className="object"
+          className="object-cover w-[250px] lg:w-[300px]"
         />
         <div className="h-12 w-12 rounded-full bg-foreground flex items-center justify-center">
           <Menu className="text-white" />

@@ -9,17 +9,17 @@ export default function Academics() {
   const isInView = useInView(ref, { margin: "0px 0px -300px 0px", once: true });
   return (
     <div className="bg-foreground text-background py-20">
-      <div className="max-w-6xl mx-auto" ref={ref}>
+      <div className="wrapper" ref={ref}>
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="font-serif text-5xl text-right h-[50vh] sticky top-16 mb-32"
+          className="font-serif text-4xl lg:text-5xl text-center lg:text-right h-[50vh] sticky top-16 mb-32"
         >
           Discover your place at <br></br>AISA
         </motion.h1>
-        <ul className="margin-t-[50vh] margin-b-[100vh] inline-block relative">
-          <li className="h-[50vh] w-auto flex items-center sticky top-32">
+        <ul className="margin-t-[50vh] margin-b-[100vh] lg:inline-block relative flex flex-col items-center">
+          <li className="h-[50vh] w-auto flex items-center sticky top-48">
             <div className="h-[400px] w-[350px] rounded-md bg-aisa-blue flex flex-col relative">
               <Image
                 src="/images/prep.jpg"
@@ -39,7 +39,7 @@ export default function Academics() {
               </div>
             </div>
           </li>
-          <li className="h-[50vh] translate-x-[275px] w-auto flex items-center sticky top-40">
+          <li className="h-[50vh] lg:translate-x-[275px] w-auto flex items-center sticky top-56">
             <div className="h-[400px] w-[350px] rounded-md bg-aisa-yellow flex flex-col relative">
               <Image
                 src="/images/primary.jpg"
@@ -59,7 +59,7 @@ export default function Academics() {
               </div>
             </div>
           </li>
-          <li className="h-[50vh] translate-x-[550px] w-auto flex items-center sticky top-48">
+          <li className="h-[50vh] lg:translate-x-[550px] w-auto flex items-center sticky top-64">
             <div className="h-[400px] w-[350px] rounded-md bg-aisa-red flex flex-col text-background relative">
               <Image
                 src="/images/middle.jpg"
@@ -79,7 +79,7 @@ export default function Academics() {
               </div>
             </div>
           </li>
-          <li className="h-[50vh] translate-x-[825px] w-auto flex items-center sticky top-56 cursor-pointer">
+          <li className="h-[50vh] lg:translate-x-[825px] w-auto flex items-center sticky top-72 cursor-pointer">
             <div className="h-[400px] w-[350px] rounded-md bg-aisa-green flex flex-col text-background relative">
               <Image
                 src="/images/high.jpg"

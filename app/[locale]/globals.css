@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@import "../../styles/embla-blog.css";
+
 :root {
   --background: #f7f4ed;
   --foreground: #081e49;
@@ -31,4 +33,12 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+}
+
+.wrapper {
+  @apply max-w-6xl mx-auto px-6 2xl:px-0;
+}
+
+.flex-center {
+  @apply flex justify-center items-center;
 }
