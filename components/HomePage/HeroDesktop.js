@@ -1,12 +1,6 @@
 "use client";
 import React, { useEffect, useRef } from "react";
-import {
-  useAnimate,
-  useScroll,
-  useTransform,
-  motion,
-  useSpring,
-} from "motion/react";
+import { useAnimate, useScroll, useTransform, motion } from "motion/react";
 import Image from "next/image";
 
 export default function HeroDesktop() {
@@ -24,38 +18,6 @@ export default function HeroDesktop() {
   const scale7 = useTransform(scrollYProgress, [0, 1], [1, 7]);
   const scale8 = useTransform(scrollYProgress, [0, 1], [1, 8]);
   const scale9 = useTransform(scrollYProgress, [0, 1], [1, 9]);
-
-  // 🎬 Overlap starts only after scaling finishes
-  // const overlapOpacity = useTransform(scrollYProgress, [0.8, 1], [0, 1]);
-  // const overlapY = useTransform(scrollYProgress, [0.8, 1], ["100vh", "0vh"]);
-  // const textOpacity = useTransform(scrollYProgress, [0.85, 1], [0, 1]);
-  // const textY = useTransform(scrollYProgress, [0.85, 1], ["40px", "0px"]);
-  const overlapOpacityRaw = useTransform(scrollYProgress, [0.92, 1], [0, 1]);
-  const overlapYRaw = useTransform(
-    scrollYProgress,
-    [0.92, 1],
-    ["100vh", "0vh"]
-  );
-  const textOpacityRaw = useTransform(scrollYProgress, [0.95, 1], [0, 1]);
-  const textYRaw = useTransform(scrollYProgress, [0.95, 1], ["40px", "0px"]);
-
-  // Add spring smoothing for slower feel
-  const overlapOpacity = useSpring(overlapOpacityRaw, {
-    stiffness: 60, // lower = slower
-    damping: 20, // higher = smoother stop
-  });
-  const overlapY = useSpring(overlapYRaw, {
-    stiffness: 60,
-    damping: 20,
-  });
-  const textOpacity = useSpring(textOpacityRaw, {
-    stiffness: 50,
-    damping: 22,
-  });
-  const textY = useSpring(textYRaw, {
-    stiffness: 50,
-    damping: 22,
-  });
 
   useEffect(() => {
     const runAnimation = async () => {
@@ -198,7 +160,7 @@ export default function HeroDesktop() {
         </div>
       </div>
 
-      <motion.div
+      {/* <motion.div
         className="h-screen bg-foreground/80 flex flex-col items-center justify-center "
         style={{
           opacity: overlapOpacity,
@@ -223,7 +185,7 @@ export default function HeroDesktop() {
           <span className="text-aisa-yellow font-semibold italic">story</span>{" "}
           deserves.
         </motion.div>
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 }

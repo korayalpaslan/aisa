@@ -50,23 +50,27 @@ export default function Welcome() {
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ margin: "-100px 0px", once: true }}
+            viewport={{ margin: "-100px 0px" }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           >
-            <Image
-              src="/images/welcome-1.jpg"
-              width={1000}
-              height={1000}
-              className="object-cover rounded-md hidden lg:block"
-              alt="school_manager_pic "
-            />
-            <Image
-              src="/images/welcome-2.jpg"
-              width={250}
-              height={250}
-              className="object-cover absolute bottom-0 h-[250px] object-top -translate-x-1/2 rounded-md hidden lg:block"
-              alt="school_manager_pic"
-            />
+            <div className="relative h-full w-full">
+              <Image
+                src="/images/welcome-1.jpg"
+                width={1000}
+                height={1000}
+                className="object-cover rounded-md hidden lg:block"
+                alt="school_manager_pic "
+              />
+
+              <Image
+                src="/images/welcome-2.jpg"
+                width={250}
+                height={250}
+                className="object-cover absolute bottom-0 h-[250px] object-top 
+                -translate-x-1/2 translate-y-1/2 rounded-md hidden lg:block"
+                alt="school_manager_pic"
+              />
+            </div>
           </motion.div>
         </div>
       </div>

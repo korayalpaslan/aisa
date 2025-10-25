@@ -1,12 +1,6 @@
 "use client";
 import React, { useEffect, useRef } from "react";
-import {
-  useAnimate,
-  useScroll,
-  useTransform,
-  motion,
-  useSpring,
-} from "motion/react";
+import { useAnimate, useScroll, useTransform, motion } from "motion/react";
 import Image from "next/image";
 
 export default function HeroMobile() {
@@ -20,32 +14,32 @@ export default function HeroMobile() {
   const scale3 = useTransform(scrollYProgress, [0, 1], [1, 1.33]);
 
   // 🎬 Overlap starts only after scaling finishes
-  const overlapOpacityRaw = useTransform(scrollYProgress, [0.92, 1], [0, 1]);
-  const overlapYRaw = useTransform(
-    scrollYProgress,
-    [0.92, 1],
-    ["100vh", "0vh"]
-  );
-  const textOpacityRaw = useTransform(scrollYProgress, [0.95, 1], [0, 1]);
-  const textYRaw = useTransform(scrollYProgress, [0.95, 1], ["40px", "0px"]);
+  // const overlapOpacityRaw = useTransform(scrollYProgress, [0.92, 1], [0, 1]);
+  // const overlapYRaw = useTransform(
+  //   scrollYProgress,
+  //   [0.92, 1],
+  //   ["100vh", "0vh"]
+  // );
+  // const textOpacityRaw = useTransform(scrollYProgress, [0.95, 1], [0, 1]);
+  // const textYRaw = useTransform(scrollYProgress, [0.95, 1], ["40px", "0px"]);
 
   // Add spring smoothing for slower feel
-  const overlapOpacity = useSpring(overlapOpacityRaw, {
-    stiffness: 60, // lower = slower
-    damping: 20, // higher = smoother stop
-  });
-  const overlapY = useSpring(overlapYRaw, {
-    stiffness: 60,
-    damping: 20,
-  });
-  const textOpacity = useSpring(textOpacityRaw, {
-    stiffness: 50,
-    damping: 22,
-  });
-  const textY = useSpring(textYRaw, {
-    stiffness: 50,
-    damping: 22,
-  });
+  // const overlapOpacity = useSpring(overlapOpacityRaw, {
+  //   stiffness: 60, // lower = slower
+  //   damping: 20, // higher = smoother stop
+  // });
+  // const overlapY = useSpring(overlapYRaw, {
+  //   stiffness: 60,
+  //   damping: 20,
+  // });
+  // const textOpacity = useSpring(textOpacityRaw, {
+  //   stiffness: 50,
+  //   damping: 22,
+  // });
+  // const textY = useSpring(textYRaw, {
+  //   stiffness: 50,
+  //   damping: 22,
+  // });
 
   useEffect(() => {
     const runAnimation = async () => {
@@ -99,7 +93,7 @@ export default function HeroMobile() {
         </div>
       </div>
 
-      <div className="h-[200vh] relative box-4 opacity-0 z-10" ref={container}>
+      <div className="h-[400vh] relative box-4 opacity-0 z-10" ref={container}>
         <div className="sticky overflow-hidden h-screen top-0 flex justify-center items-start ">
           {pictures.map((picture) => {
             return (
@@ -130,7 +124,7 @@ export default function HeroMobile() {
         </div>
       </div>
 
-      <motion.div
+      {/* <motion.div
         className="h-screen bg-foreground/80 flex flex-col items-center justify-center"
         style={{
           opacity: overlapOpacity,
@@ -155,7 +149,7 @@ export default function HeroMobile() {
           <span className="text-aisa-yellow font-semibold italic">story</span>{" "}
           deserves.
         </motion.div>
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 }
