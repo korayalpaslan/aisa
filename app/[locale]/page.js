@@ -8,6 +8,8 @@ import Welcome from "@/components/HomePage/Welcome";
 import Features from "@/components/HomePage/Features";
 import Testimonials from "@/components/HomePage/Testimonials";
 import Cta from "@/components/HomePage/Cta";
+import News from "@/components/HomePage/News";
+import Explore from "@/components/HomePage/Explore";
 
 export default async function Home() {
   const locale = await getLocale();
@@ -21,6 +23,8 @@ export default async function Home() {
       <Features />
       <Testimonials />
       <Cta />
+      <News />
+      <Explore />
     </div>
   );
 }

@@ -34,12 +34,12 @@ export const usePrevNextButtons = (emblaApi) => {
   };
 };
 
-export const PrevButton = (props) => {
+export const PrevButtonNews = (props) => {
   const { children, ...restProps } = props;
 
   return (
     <button
-      className="embla__button embla__button--prev"
+      className="embla__button embla__button--prev embla__button_news"
       type="button"
       {...restProps}
     >
@@ -54,12 +54,12 @@ export const PrevButton = (props) => {
   );
 };
 
-export const NextButton = (props) => {
+export const NextButtonNews = (props) => {
   const { children, ...restProps } = props;
 
   return (
     <button
-      className="embla__button embla__button--next "
+      className="embla__button embla__button--next embla__button_news"
       type="button"
       {...restProps}
     >

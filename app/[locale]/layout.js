@@ -4,6 +4,7 @@ import { Manrope, Cormorant_Garamond } from "next/font/google";
 
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -31,6 +32,7 @@ export default async function RootLayout({ children }) {
         >
           <Navbar />
           {children}
+          <Footer />
         </body>
       </html>
     </NextIntlClientProvider>
