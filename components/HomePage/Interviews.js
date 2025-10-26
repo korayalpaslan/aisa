@@ -74,8 +74,8 @@ const Interviews = () => {
                       alt="testimonial-videos"
                       className="h-full w-full object-cover"
                     />
-                    <div className="bg-foreground/50 absolute top-0 left-0 right-0 bottom-0  text-background cursor-pointer">
-                      <di className="translate-y-28 hover:translate-y-0 transition-all duration-500 h-full w-full flex flex-col justify-end">
+                    <div className="group/parent bg-foreground/50 hover:bg-foreground/20 transition-all duration-500 absolute top-0 left-0 right-0 bottom-0  text-background cursor-pointer">
+                      <div className="group/child translate-y-28 hover:translate-y-0 transition-all duration-500 h-full w-full flex flex-col justify-end">
                         <div className="px-6 mb-10">
                           <h4 className="text-3xl mb-2 font-semibold">
                             {post.title}
@@ -90,7 +90,7 @@ const Interviews = () => {
                             <Plus size={32} />
                           </div>
                         </div>
-                      </di>
+                      </div>
                     </div>
                     <span
                       className="h-3 absolute bottom-0 left-0 right-0"

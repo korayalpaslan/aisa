@@ -65,7 +65,7 @@ export default function HeroDesktop() {
       height: "34vh",
     },
     {
-      src: "/images/1.jpeg",
+      src: "/images/1.jpg",
       scale: scale4,
       top: "15vh",
       left: "-46vw",

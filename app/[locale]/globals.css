@@ -36,7 +36,7 @@ body {
 }
 
 .wrapper {
-  @apply max-w-6xl mx-auto px-6 2xl:px-0;
+  @apply max-w-6xl mx-auto px-10 2xl:px-0;
 }
 
 .flex-center {

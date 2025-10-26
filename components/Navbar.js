@@ -16,13 +16,13 @@ export default function Navbar() {
   }, [animate]);
   return (
     <div ref={scope}>
-      <div className="box-1 opacity-0  px-10 flex justify-between items-center h-24">
+      <div className="box-1 opacity-0 px-6 flex justify-between items-center h-24">
         <Image
           src="/images/logo.png"
-          width={300}
-          height={300}
+          width={250}
+          height={250}
           alt="logo"
-          className="object-cover w-[250px] lg:w-[300px]"
+          className="object-cover w-[200px] lg:w-[250px]"
         />
         <div className="h-12 w-12 rounded-full bg-foreground flex items-center justify-center">
           <Menu className="text-white" />

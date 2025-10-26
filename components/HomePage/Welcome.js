@@ -50,7 +50,7 @@ export default function Welcome() {
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ margin: "-100px 0px" }}
+            viewport={{ margin: "-100px 0px", once: true }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           >
             <div className="relative h-full w-full">

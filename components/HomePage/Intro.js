@@ -10,7 +10,7 @@ export default function Intro() {
     <div className="bg-foreground">
       <div
         ref={ref}
-        className="py-40 space-y-5 max-w-4xl mx-auto px-6 text-background"
+        className="py-40 space-y-5 max-w-4xl mx-auto text-background wrapper"
       >
         <motion.h1
           initial={{ opacity: 0, y: 50 }}

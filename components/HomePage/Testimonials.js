@@ -28,7 +28,14 @@ export default function Testimonials() {
           to top universities in a welcoming, multicultural community.
         </motion.p>
       </div>
-      <Interviews />
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ margin: "-100px 0px", once: true }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <Interviews />
+      </motion.div>
     </div>
   );
 }

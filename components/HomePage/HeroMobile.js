@@ -11,8 +11,9 @@ export default function HeroMobile() {
     offset: ["start start", "end end"],
   });
 
-  const scale3 = useTransform(scrollYProgress, [0, 1], [1, 1.33]);
-
+  const scale3 = useTransform(scrollYProgress, [0, 1], [1, 2]);
+  const scale4 = useTransform(scrollYProgress, [0, 1], [1, 3]);
+  const scale5 = useTransform(scrollYProgress, [0, 1], [1, 3]);
   // 🎬 Overlap starts only after scaling finishes
   // const overlapOpacityRaw = useTransform(scrollYProgress, [0.92, 1], [0, 1]);
   // const overlapYRaw = useTransform(
@@ -76,13 +77,29 @@ export default function HeroMobile() {
       scale: scale3,
       top: "",
       left: "",
-      width: "75vw",
-      height: "75vh",
+      width: "50vw",
+      height: "50vh",
+    },
+    {
+      src: "/images/7.jpeg",
+      scale: scale4,
+      top: "",
+      left: "-42vw",
+      width: "25vw",
+      height: "35vh",
+    },
+    {
+      src: "/images/1.jpg",
+      scale: scale5,
+      top: "",
+      left: "42vw",
+      width: "25vw",
+      height: "35vh",
     },
   ];
   return (
     <div ref={scope} className="lg:hidden">
-      <div className="w-full flex items-end h-[20vh] translate-y-[20vh]">
+      <div className="w-full flex items-end h-[20vh] translate-y-[30vh]">
         <div className="box-3 flex flex-col justify-center space-y-2 mx-auto">
           <div className="box-1 opacity-0 -translate-x-[50px] text-foreground text-4xl font-serif text-center">
             Learn Here,

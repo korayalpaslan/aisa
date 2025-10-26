@@ -71,31 +71,31 @@ export default function Features() {
 
   const icons = [
     {
-      icon: <Medal size={40} />,
+      icon: <Medal size={40} strokeWidth={1} />,
     },
     {
-      icon: <Earth size={40} />,
+      icon: <Earth size={40} strokeWidth={1} />,
     },
     {
-      icon: <BookOpenCheck size={40} />,
+      icon: <BookOpenCheck size={40} strokeWidth={1} />,
     },
     {
-      icon: <GraduationCap size={40} />,
+      icon: <GraduationCap size={40} strokeWidth={1} />,
     },
     {
-      icon: <Trophy size={40} />,
+      icon: <Trophy size={40} strokeWidth={1} />,
     },
     {
-      icon: <LandPlot size={40} />,
+      icon: <LandPlot size={40} strokeWidth={1} />,
     },
     {
-      icon: <Medal size={40} />,
+      icon: <Medal size={40} strokeWidth={1} />,
     },
     {
-      icon: <Earth size={40} />,
+      icon: <Earth size={40} strokeWidth={1} />,
     },
     {
-      icon: <BookOpenCheck size={40} />,
+      icon: <BookOpenCheck size={40} strokeWidth={1} />,
     },
   ];
   return (
@@ -121,10 +121,10 @@ export default function Features() {
             {icons.map((icon, i) => {
               return (
                 <li
-                  className={`border  rounded-md h-full w-full py-5 flex-center text-background cursor-pointer ${
+                  className={`border rounded-md h-full w-full py-5 flex-center text-background cursor-pointer ${
                     index === i
                       ? "bg-aisa-blue border-aisa-blue"
-                      : "border-background"
+                      : "border-background/30"
                   }`}
                   key={i}
                   onClick={() => setIndex(i)}

@@ -25,7 +25,7 @@ export default function Academics() {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         >
           <li className="w-auto flex items-center">
-            <div className="h-[400px] w-[350px] rounded-md bg-aisa-blue flex flex-col relative">
+            <div className="h-[400px] w-full sm:w-[350px] rounded-md bg-aisa-blue flex flex-col relative">
               <Image
                 src="/images/prep.jpg"
                 width={320}
@@ -45,7 +45,7 @@ export default function Academics() {
             </div>
           </li>
           <li className="w-auto flex items-center">
-            <div className="h-[400px] w-[350px] rounded-md bg-aisa-yellow flex flex-col relative">
+            <div className="h-[400px] w-full sm:w-[350px] rounded-md bg-aisa-yellow flex flex-col relative">
               <Image
                 src="/images/primary.jpg"
                 width={320}
@@ -65,7 +65,7 @@ export default function Academics() {
             </div>
           </li>
           <li className="w-auto flex items-center">
-            <div className="h-[400px] w-[350px] rounded-md bg-aisa-red flex flex-col relative">
+            <div className="h-[400px] w-full sm:w-[350px] rounded-md bg-aisa-red flex flex-col relative">
               <Image
                 src="/images/middle.jpg"
                 width={320}
@@ -85,7 +85,7 @@ export default function Academics() {
             </div>
           </li>
           <li className="w-auto flex items-center">
-            <div className="h-[400px] w-[350px] rounded-md bg-aisa-green flex flex-col relative">
+            <div className="h-[400px] w-full sm:w-[350px] rounded-md bg-aisa-green flex flex-col relative">
               <Image
                 src="/images/high.jpg"
                 width={320}
