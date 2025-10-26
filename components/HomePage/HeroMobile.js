@@ -77,8 +77,8 @@ export default function HeroMobile() {
       scale: scale3,
       top: "",
       left: "",
-      width: "50vw",
-      height: "50vh",
+      width: "51vw",
+      height: "51vh",
     },
     {
       src: "/images/7.jpeg",

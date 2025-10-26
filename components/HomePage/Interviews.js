@@ -1,14 +1,12 @@
 "use client";
-import React from "react";
-import Link from "next/link";
+import useEmblaCarousel from "embla-carousel-react";
+import { Plus } from "lucide-react";
+import Image from "next/image";
 import {
-  PrevButton,
   NextButton,
+  PrevButton,
   usePrevNextButtons,
 } from "./EmblaCarouselArrowButtons";
-import useEmblaCarousel from "embla-carousel-react";
-import Image from "next/image";
-import { Plus } from "lucide-react";
 
 const data = [
   {
