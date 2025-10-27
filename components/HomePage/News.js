@@ -1,13 +1,9 @@
 "use client";
+import useEmblaCarousel from "embla-carousel-react";
+import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import React from "react";
-import useEmblaCarousel from "embla-carousel-react";
-import {
-  NextButton,
-  PrevButton,
-  usePrevNextButtons,
-} from "./EmblaCarouselArrowButtons";
+import { usePrevNextButtons } from "./EmblaCarouselArrowButtons";
 import {
   NextButtonNews,
   PrevButtonNews,
@@ -55,10 +51,22 @@ export default function News() {
   return (
     <div>
       <div className="wrapper py-20">
-        <h1 className="font-serif text-4xl lg:text-5xl text-center mb-5">
+        <motion.h1
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ margin: "-100px 0px", once: true }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="font-serif text-4xl lg:text-5xl text-center mb-5"
+        >
           Latest News
-        </h1>
-        <div className="space-x-10 hidden lg:flex py-10">
+        </motion.h1>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ margin: "-100px 0px", once: true }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="space-x-10 hidden lg:flex py-10"
+        >
           <div className="w-1/2 flex flex-col space-y-5">
             <div>
               <Image
@@ -113,8 +121,14 @@ export default function News() {
               );
             })}
           </div>
-        </div>
-        <div className="lg:hidden">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ margin: "-100px 0px", once: true }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="lg:hidden"
+        >
           <section className="embla h-auto w-full">
             <div className="font-semibold flex justify-center lg:justify-end items-center lg:-translate-y-full mb-10 lg:mb-0">
               <div className="embla__controls">
@@ -162,7 +176,7 @@ export default function News() {
               </div>
             </div>
           </section>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
