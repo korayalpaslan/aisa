@@ -13,7 +13,7 @@ export default function Academics() {
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           className="font-serif text-4xl lg:text-5xl text-center lg:h-[50vh] lg:sticky lg:top-16 lg:mb-32 mb-16"
         >
           Discover your place at AISA

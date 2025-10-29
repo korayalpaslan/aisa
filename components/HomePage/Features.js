@@ -11,6 +11,9 @@ import {
 } from "lucide-react";
 
 export default function Features() {
+  const [origin, setOrigin] = useState([0, 0]);
+
+  const BASE_DELAY = 0.5;
   const [index, setIndex] = useState(0);
   const stats = [
     {
@@ -69,6 +72,57 @@ export default function Features() {
     },
   ];
 
+  const getDistance = (row, col) => {
+    return (
+      Math.sqrt((row - origin[0]) ** 2 + (col - origin[1]) ** 2) /
+      (3 * Math.sqrt(2))
+    );
+  };
+
+  const coordinates = [
+    {
+      index: 0,
+      coordinate: [0, 0],
+    },
+    {
+      index: 1,
+      coordinate: [0, 1],
+    },
+    {
+      index: 2,
+      coordinate: [0, 2],
+    },
+    {
+      index: 3,
+      coordinate: [1, 0],
+    },
+    {
+      index: 4,
+      coordinate: [1, 1],
+    },
+    {
+      index: 5,
+      coordinate: [1, 2],
+    },
+    {
+      index: 6,
+      coordinate: [2, 0],
+    },
+    {
+      index: 7,
+      coordinate: [2, 1],
+    },
+    {
+      index: 8,
+      coordinate: [2, 2],
+    },
+  ];
+
+  const handleClick = (i) => {
+    setIndex(i);
+    setOrigin(coordinates[i].coordinate);
+  };
+
   const icons = [
     {
       icon: <Medal size={40} strokeWidth={1} />,
@@ -117,23 +171,33 @@ export default function Features() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex flex-col lg:flex-row space-y-10 lg:space-y-0 lg:space-x-20 lg:items-center"
         >
-          <ul className="w-full lg:w-1/2 grid grid-cols-3 gap-5">
+          <div className="w-full lg:w-1/2 grid grid-cols-3 gap-5">
             {icons.map((icon, i) => {
+              const row = Math.floor(i / 3);
+              const col = i % 3;
+              const isOrigin = row === origin[0] && col === origin[1];
+              const delay = getDistance(row, col) * BASE_DELAY;
               return (
-                <li
-                  className={`border rounded-md h-full w-full py-5 flex-center text-background cursor-pointer ${
-                    index === i
-                      ? "bg-aisa-blue border-aisa-blue"
-                      : "border-background/30"
-                  }`}
-                  key={i}
-                  onClick={() => setIndex(i)}
+                <motion.div
+                  className={` rounded-md h-full w-full py-5 flex-center text-background cursor-pointer`}
+                  key={`${i}-${origin.join("-")}`}
+                  style={{ backgroundColor: isOrigin ? "#3bbbfb" : "#051737" }}
+                  initial={{
+                    opacity: isOrigin ? 1 : 0,
+                    scale: isOrigin ? 1 : 0.3,
+                  }}
+                  animate={{
+                    opacity: 0.8,
+                    scale: 1,
+                  }}
+                  transition={{ type: "spring", bounce: 0.5, delay: delay }}
+                  onClick={() => handleClick(i)}
                 >
                   {icon.icon}
-                </li>
+                </motion.div>
               );
             })}
-          </ul>
+          </div>
 
           <motion.div
             className="w-full lg:w-1/2 text-background text-center lg:text-left"
