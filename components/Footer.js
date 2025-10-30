@@ -11,7 +11,7 @@ export default function Footer() {
           </h2>
           <div className="order-1 lg:order-2">
             <Image
-              src="/images/logo.png"
+              src="/images/01.png"
               width={250}
               height={250}
               alt="logo"

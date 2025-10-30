@@ -49,7 +49,7 @@ export default function Navbar() {
     <div ref={scope}>
       <div className="box-1 opacity-0 px-6 flex justify-between items-center h-24 relative">
         <Image
-          src="/images/logo.png"
+          src="/images/02.png"
           width={250}
           height={250}
           alt="logo"
