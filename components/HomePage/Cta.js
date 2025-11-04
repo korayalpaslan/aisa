@@ -9,13 +9,13 @@ export default function Cta() {
             <h1 className="font-serif text-4xl lg:text-5xl text-center lg:text-left text-background">
               Begin your journey at AISA today
             </h1>
-            <p className="text-xl lg:w-1/2">
+            <p className="text-xl text-center lg:text-left lg:w-1/2">
               Take the first step toward an international education that
               inspires curiosity, confidence, and connection.
             </p>
           </div>
 
-          <div>
+          <div className="flex justify-center lg:justify-end">
             <button className="bg-aisa-yellow px-6 py-2 rounded-4xl font-semibold text-foreground text-sm hover:bg-yellow-500 duration-300 transition-all ease-in-out cursor-pointer">
               Get in touch
             </button>

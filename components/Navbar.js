@@ -96,13 +96,18 @@ export default function Navbar() {
         initial="close"
       >
         <div className="h-screen w-full flex flex-col">
-          <div className="font-serif text-2xl lg:text-5xl text-background p-10 lg:p-20 flex-1 mt-24">
+          <div className="font-serif text-2xl lg:text-5xl text-background px-10 lg:p-20 flex-1 mt-10">
             <ul className="space-y-5 lg:space-y-10">
-              <li>About AISA</li>
               <li>Our School</li>
-              <li>Academics</li>
+              <li>Admissions</li>
               <li>Student Life</li>
-              <li>Contact</li>
+              <li>Latest News</li>
+            </ul>
+            <ul className="mt-5 py-5 border-t border-t-gray-500 space-y-5 lg:space-y-10">
+              <li className="text-aisa-blue">Prep School</li>
+              <li className="text-aisa-yellow">Primary School</li>
+              <li className="text-aisa-red">Middle School</li>
+              <li className="text-aisa-green">High School</li>
             </ul>
           </div>
         </div>

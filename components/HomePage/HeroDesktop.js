@@ -71,6 +71,7 @@ export default function HeroDesktop() {
       left: "",
       width: "34vw",
       height: "34vh",
+      blur: "",
     },
     // {
     //   src: "/images/4.jpg",
@@ -87,6 +88,7 @@ export default function HeroDesktop() {
       left: "-46vw",
       width: "15vw",
       height: "40vh",
+      blur: "/images/1-blur.jpg",
     },
     {
       src: "/images/2.jpg",
@@ -95,6 +97,7 @@ export default function HeroDesktop() {
       left: "46vw",
       width: "15vw",
       height: "40vh",
+      blur: "/images/2-blur.jpg",
     },
     {
       src: "/images/3.jpg",
@@ -103,6 +106,7 @@ export default function HeroDesktop() {
       left: "28vw",
       width: "15vw",
       height: "30vh",
+      blur: "/images/3-blur.jpg",
     },
     {
       src: "/images/5.jpg",
@@ -111,6 +115,7 @@ export default function HeroDesktop() {
       left: "-28vw",
       width: "15vw",
       height: "30vh",
+      blur: "/images/5-blur.jpg",
     },
     {
       src: "/images/6.jpg",
@@ -119,6 +124,7 @@ export default function HeroDesktop() {
       left: "28vw",
       width: "15vw",
       height: "30vh",
+      blur: "/images/6-blur.jpg",
     },
     {
       src: "/images/7.jpg",
@@ -127,6 +133,7 @@ export default function HeroDesktop() {
       left: "-28vw",
       width: "15vw",
       height: "30vh",
+      blur: "/images/7-blur.jpg",
     },
   ];
   return (
@@ -181,6 +188,8 @@ export default function HeroDesktop() {
                       fill
                       alt="school-image"
                       className="object-cover rounded-md"
+                      placeholder="blur"
+                      blurDataURL={`${picture.blur}`}
                     />
                   )}
                   {/* <Image

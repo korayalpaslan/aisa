@@ -20,11 +20,10 @@ export default function Footer() {
           </div>
           <div className="order-3 flex flex-col space-y-2 text-gray-400 text-center lg:text-start">
             <p className="text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
-              atque!
+              Oba Mah. Alanya International School No:2 Alanya / Antalya
             </p>
-            <p className="text-sm">info@alanyaamerican.edu.tr</p>
-            <p className="text-sm">+90 242 300 30 30</p>
+            <p className="text-sm">amerikankulturkolejialanya@gmail.com</p>
+            <p className="text-sm">+90 531 885 85 09</p>
           </div>
         </div>
         <div className="w-full lg:w-3/4 flex flex-col item-center lg:flex-row lg:justify-around text-background">
@@ -32,27 +31,27 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">QUICK LINKS</h4>
             <ul className="font-thin space-y-2 text-gray-400">
               <li>OUR SCHOOL</li>
-              <li>ADMISSION</li>
+              <li>ADMISSIONS</li>
+              <li>STUDENT LIFE</li>
               <li>LATEST NEWS</li>
-              <li>ACADEMICS</li>
             </ul>
           </div>
           <div className="mt-20 text-sm  text-center lg:text-start">
-            <h4 className="font-semibold mb-4">QUICK LINKS</h4>
+            <h4 className="font-semibold mb-4">ACADEMICS</h4>
             <ul className="font-thin space-y-2 text-gray-400">
-              <li>OUR SCHOOL</li>
-              <li>ADMISSION</li>
-              <li>LATEST NEWS</li>
-              <li>ACADEMICS</li>
+              <li>PREP SCHOOL</li>
+              <li>PRIMARY SCHOOL</li>
+              <li>MIDDLE SCHOOL</li>
+              <li>HIGH SCHOOL</li>
             </ul>
           </div>
           <div className="mt-20 text-sm  text-center lg:text-start">
-            <h4 className="font-semibold mb-4">QUICK LINKS</h4>
+            <h4 className="font-semibold mb-4">SOCIAL MEDIA</h4>
             <ul className="font-thin space-y-2 text-gray-400">
-              <li>OUR SCHOOL</li>
-              <li>ADMISSION</li>
-              <li>LATEST NEWS</li>
-              <li>ACADEMICS</li>
+              <li>INSTAGRAM</li>
+              <li>FACEBOOK</li>
+              <li>TELEGRAM</li>
+              <li>LINKEDIN</li>
             </ul>
           </div>
         </div>
