@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { useAnimate, motion, AnimatePresence } from "motion/react";
 import { Menu, X } from "lucide-react";
+import ScrollUp from "./ScrollUp";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -112,6 +113,7 @@ export default function Navbar() {
           </div>
         </div>
       </motion.div>
+      <ScrollUp />
     </div>
   );
 }
