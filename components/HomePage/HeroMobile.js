@@ -65,6 +65,11 @@ export default function HeroMobile() {
           { y: 0, opacity: [0, 1] },
           { duration: 0.8, ease: "easeOut", delay: 0.2 },
         ],
+        [
+          ".box-5",
+          { y: 0, opacity: [0, 1] },
+          { duration: 0.8, ease: "easeOut", delay: 0.2 },
+        ],
       ]);
     };
 
@@ -72,8 +77,18 @@ export default function HeroMobile() {
   }, [animate]);
 
   const pictures = [
+    // {
+    //   src: "/images/4.jpg",
+    //   scale: scale3,
+    //   top: "",
+    //   left: "",
+    //   width: "51vw",
+    //   height: "51vh",
+    // },
     {
-      src: "/images/4.jpg",
+      type: "video",
+      src: "/images/hero.webm",
+      poster: "/images/hero.jpg",
       scale: scale3,
       top: "",
       left: "",
@@ -81,7 +96,7 @@ export default function HeroMobile() {
       height: "51vh",
     },
     {
-      src: "/images/7.jpeg",
+      src: "/images/7.jpg",
       scale: scale4,
       top: "",
       left: "-42vw",
@@ -89,7 +104,7 @@ export default function HeroMobile() {
       height: "35vh",
     },
     {
-      src: "/images/1.jpg",
+      src: "/images/2.jpg",
       scale: scale5,
       top: "",
       left: "42vw",
@@ -99,23 +114,31 @@ export default function HeroMobile() {
   ];
   return (
     <div ref={scope} className="lg:hidden">
-      <div className="w-full flex items-end h-[20vh] translate-y-[30vh]">
-        <div className="box-3 flex flex-col justify-center space-y-2 mx-auto">
+      <div className="w-full flex flex-col justify-start h-[20vh] translate-y-[30vh]">
+        <div className="box-3 flex flex-col justify-start space-y-2 mx-auto mb-5">
           <div className="box-1 opacity-0 -translate-x-[50px] text-foreground text-4xl font-serif text-center">
-            Learn Here,
+            Learning
           </div>
           <div className="box-2 opacity-0 translate-x-[50px] text-aisa-blue text-4xl font-serif text-center">
-            Belong Everywhere
+            Without Borders
           </div>
+        </div>
+        <div className="flex justify-center box-4 opacity-0 -translate-y-[150px]">
+          <button className="bg-aisa-yellow px-6 py-2 rounded-4xl font-semibold text-foreground text-sm hover:bg-yellow-500 duration-300 transition-all ease-in-out cursor-pointer">
+            Book a Campus Tour
+          </button>
         </div>
       </div>
 
-      <div className="h-[400vh] relative box-4 opacity-0 z-10" ref={container}>
-        <div className="sticky overflow-hidden h-screen top-0 flex justify-center items-start ">
+      <div
+        className="h-[400vh] relative box-5 opacity-0 z-10 lg:hidden"
+        ref={container}
+      >
+        <div className="sticky overflow-hidden h-screen top-0  flex justify-center items-start">
           {pictures.map((picture) => {
             return (
               <motion.div
-                className="flex justify-center items-center absolute top-0 h-full "
+                className="flex justify-center items-center absolute top-0 h-full"
                 key={picture.src}
                 style={{ scale: picture.scale }}
               >
@@ -128,45 +151,37 @@ export default function HeroMobile() {
                   }}
                   className="relative"
                 >
-                  <Image
+                  {picture.type === "video" ? (
+                    <video
+                      src={picture.src}
+                      poster={picture.poster}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="object-cover rounded-md w-full h-full"
+                    />
+                  ) : (
+                    <Image
+                      src={picture.src}
+                      fill
+                      alt="school-image"
+                      className="object-cover rounded-md"
+                    />
+                  )}
+
+                  {/* <Image
                     src={picture.src}
                     fill
                     alt="school-image"
                     className="object-cover rounded-md"
-                  />
+                  /> */}
                 </div>
               </motion.div>
             );
           })}
         </div>
       </div>
-
-      {/* <motion.div
-        className="h-screen bg-foreground/80 flex flex-col items-center justify-center"
-        style={{
-          opacity: overlapOpacity,
-          y: overlapY,
-          position: "relative",
-          zIndex: 10,
-          marginTop: "-100vh", // still overlaps the previous section
-        }}
-      >
-        <motion.div
-          style={{
-            opacity: textOpacity,
-            y: textY,
-          }}
-          className="text-2xl font-serif text-center text-background max-w-5xl mx-auto "
-        >
-          This is your{" "}
-          <span className="text-aisa-yellow font-semibold italic">school</span>.
-          This is your{" "}
-          <span className="text-aisa-yellow font-semibold italic">journey</span>
-          .<br></br>This is the extraordinary opportunity your{" "}
-          <span className="text-aisa-yellow font-semibold italic">story</span>{" "}
-          deserves.
-        </motion.div>
-      </motion.div> */}
     </div>
   );
 }

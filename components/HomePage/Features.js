@@ -18,9 +18,9 @@ export default function Features() {
   const stats = [
     {
       figure: "400+",
-      title: "Enrolled Student",
+      title: "A global community in the heart of Alanya.",
       description:
-        " Students from around the world come together across our two lively Alanya campuses, learning, growing, and making lifelong friends.",
+        "400+ students from more than 30 countries call AISA home. Across our two lively campuses, they learn, grow, and make lifelong friends while experiencing a truly international education.",
     },
     {
       figure: "300+",
@@ -52,24 +52,24 @@ export default function Features() {
       description:
         " Students from around the world come together across our two lively Alanya campuses, learning, growing, and making lifelong friends.",
     },
-    {
-      figure: "400+",
-      title: "Enrolled Student",
-      description:
-        " Students from around the world come together across our two lively Alanya campuses, learning, growing, and making lifelong friends.",
-    },
-    {
-      figure: "300+",
-      title: "Title 2",
-      description:
-        " Students from around the world come together across our two lively Alanya campuses, learning, growing, and making lifelong friends.",
-    },
-    {
-      figure: "200+",
-      title: "Title 3",
-      description:
-        " Students from around the world come together across our two lively Alanya campuses, learning, growing, and making lifelong friends.",
-    },
+    // {
+    //   figure: "400+",
+    //   title: "Enrolled Student",
+    //   description:
+    //     " Students from around the world come together across our two lively Alanya campuses, learning, growing, and making lifelong friends.",
+    // },
+    // {
+    //   figure: "300+",
+    //   title: "Title 2",
+    //   description:
+    //     " Students from around the world come together across our two lively Alanya campuses, learning, growing, and making lifelong friends.",
+    // },
+    // {
+    //   figure: "200+",
+    //   title: "Title 3",
+    //   description:
+    //     " Students from around the world come together across our two lively Alanya campuses, learning, growing, and making lifelong friends.",
+    // },
   ];
 
   const getDistance = (row, col) => {
@@ -104,18 +104,18 @@ export default function Features() {
       index: 5,
       coordinate: [1, 2],
     },
-    {
-      index: 6,
-      coordinate: [2, 0],
-    },
-    {
-      index: 7,
-      coordinate: [2, 1],
-    },
-    {
-      index: 8,
-      coordinate: [2, 2],
-    },
+    // {
+    //   index: 6,
+    //   coordinate: [2, 0],
+    // },
+    // {
+    //   index: 7,
+    //   coordinate: [2, 1],
+    // },
+    // {
+    //   index: 8,
+    //   coordinate: [2, 2],
+    // },
   ];
 
   const handleClick = (i) => {
@@ -142,15 +142,15 @@ export default function Features() {
     {
       icon: <LandPlot size={40} strokeWidth={1} />,
     },
-    {
-      icon: <Medal size={40} strokeWidth={1} />,
-    },
-    {
-      icon: <Earth size={40} strokeWidth={1} />,
-    },
-    {
-      icon: <BookOpenCheck size={40} strokeWidth={1} />,
-    },
+    // {
+    //   icon: <Medal size={40} strokeWidth={1} />,
+    // },
+    // {
+    //   icon: <Earth size={40} strokeWidth={1} />,
+    // },
+    // {
+    //   icon: <BookOpenCheck size={40} strokeWidth={1} />,
+    // },
   ];
   return (
     <div className="py-20 lg:py-40 bg-foreground">
@@ -162,7 +162,7 @@ export default function Features() {
           viewport={{ margin: "-100px 0px", once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          Our Highlights
+          At a glance
         </motion.h1>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -179,7 +179,7 @@ export default function Features() {
               const delay = getDistance(row, col) * BASE_DELAY;
               return (
                 <motion.div
-                  className={` rounded-md h-full w-full py-5 flex-center text-background cursor-pointer`}
+                  className={` rounded-md h-full lg:min-h-32 w-full py-5 flex-center text-background cursor-pointer`}
                   key={`${i}-${origin.join("-")}`}
                   style={{ backgroundColor: isOrigin ? "#3bbbfb" : "#051737" }}
                   initial={{

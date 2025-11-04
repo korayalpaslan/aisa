@@ -20,28 +20,28 @@ export default function News() {
   } = usePrevNextButtons(emblaApi);
   const posts = [
     {
-      id: 1,
+      id: 2,
       title: "Excelence Shaped by People",
       date: "10.10.2025",
       description:
         "At the American International School of Alanya, excellence is shaped by people. With more than 70% of its budget to staffing, AISA ensures students learn from highly qualified, internationally experienced educators who bring learning to life.",
     },
     {
-      id: 2,
+      id: 4,
       title: "AISA’s Commitment to CPR and First Aid",
       date: "02.10.2025",
       description:
         "At the American International School of Alanya, excellence is shaped by people. With more than 70% of its budget to staffing, AISA ensures students learn from highly qualified, internationally experienced educators who bring learning to life.",
     },
     {
-      id: 3,
+      id: 5,
       title: "AISA Arts: A Year of Learning,Creativity, and Collaboration",
       date: "18.09.2025",
       description:
         "At the American International School of Alanya, excellence is shaped by people. With more than 70% of its budget to staffing, AISA ensures students learn from highly qualified, internationally experienced educators who bring learning to life.",
     },
     {
-      id: 4,
+      id: 6,
       title: "More Than Tropies: A Year of Growth, Friendship, and Lion Pride",
       date: "10.09.2025",
       description:

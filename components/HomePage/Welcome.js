@@ -18,24 +18,23 @@ export default function Welcome() {
             Hear from Our Principal
           </h2>
           <h4 className="text-xl font-bold">
-            We are a high achieving selective grammar school with academy
-            status, educating girls between the ages of 11 and 16 and girls and
-            boys in the Sixth Form.
+            When you walk through our campus, you’ll feel something special — a
+            sense of belonging. Here at AISA, we believe that education begins
+            with connection. We learn better when we feel seen, heard, and cared
+            for.
           </h4>
           <p>
-            Our school community encourages all students to reach their
-            potential in a caring environment where wellbeing is the priority.
+            Every child who joins our community brings their own story, culture,
+            and dreams. Our role as educators is to guide, encourage, and
+            celebrate each of them as they discover who they are and who they
+            can become.
           </p>
           <p>
-            Welcome We are a high achieving selective grammar school with
-            academy status, educating girls between the ages of 11 and 16 and
-            girls and boys in the Sixth Form. Our school community encourages
-            all students to reach their potential in a caring environment where
-            wellbeing is the priority. A broad, balanced and challenging
-            curriculum allows for the development of key skills enabling our
-            students to explore, question and build resilience.
+            I invite you to visit us, meet our teachers, and feel the energy
+            that makes this school so alive. At AISA, we’re more than a school —
+            we’re a family that grows together.
           </p>
-          <p className="text-sm font-semibold">Ali Veli, School Principal</p>
+          <p className="text-sm font-semibold">Erdal Sayi, School Principal</p>
         </motion.div>
         <div className="w-full lg:w-1/2 relative">
           <div>

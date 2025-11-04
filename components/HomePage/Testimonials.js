@@ -21,11 +21,14 @@ export default function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ margin: "-100px 0px", once: true }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className="max-w-4xl mx-auto text-center"
+          className="max-w-4xl mx-auto text-center text-xl"
         >
-           AISA, American PreK-12 international school, offers international
-          programs, empowering students to excel academically and gain admission
-          to top universities in a welcoming, multicultural community.
+          Experience a sense of belonging.” Alt metin: “With students and
+          families from around the world, AISA celebrates diversity while
+          building a strong sense of community. We believe learning happens best
+          when everyone feels accepted and connected. Our students grow as
+          confident, kind, and open-minded individuals — ready to make a
+          difference wherever life takes them.
         </motion.p>
       </div>
       <motion.div

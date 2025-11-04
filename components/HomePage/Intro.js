@@ -23,13 +23,22 @@ export default function Intro() {
         <motion.p
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
-          className="text-2xl lg:text-3xl font-serif text-center"
+          transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
+          className="text-2xl lg:text-3xl font-serif text-center mb-10"
         >
-           AISA, American PreK-12 international school, offers international
-          programs, empowering students to excel academically and gain admission
-          to top universities in a welcoming, multicultural community.
+          AISA offers a K–12 international education in Alanya—where curiosity,
+          character, and academic ambition grow together.
         </motion.p>
+        {/* <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
+          className="flex justify-center"
+        >
+          <button className="bg-aisa-yellow px-6 py-2 rounded-4xl font-semibold text-foreground text-sm hover:bg-yellow-500 duration-300 transition-all ease-in-out cursor-pointer">
+            Book a Campus Tour
+          </button>
+        </motion.div> */}
       </div>
     </div>
   );
