@@ -2,12 +2,13 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
 import {
-  Medal,
+  BrainCircuit,
   Earth,
-  BookOpenCheck,
+  Globe,
   GraduationCap,
-  Trophy,
-  LandPlot,
+  Landmark,
+  BookOpen,
+  Waves,
 } from "lucide-react";
 
 export default function Features() {
@@ -18,37 +19,37 @@ export default function Features() {
   const stats = [
     {
       figure: "400+",
-      title: "A global community in the heart of Alanya.",
+      title: "Global Diversity ",
       description:
         "400+ students from more than 30 countries call AISA home. Across our two lively campuses, they learn, grow, and make lifelong friends while experiencing a truly international education.",
     },
     {
-      figure: "300+",
-      title: "Title 2",
+      figure: "98",
+      title: "Academic Excellence",
       description:
         " Students from around the world come together across our two lively Alanya campuses, learning, growing, and making lifelong friends.",
     },
     {
-      figure: "200+",
-      title: "Title 3",
+      figure: "2",
+      title: "Modern Campuses",
       description:
         " Students from around the world come together across our two lively Alanya campuses, learning, growing, and making lifelong friends.",
     },
     {
-      figure: "100+",
-      title: "Title 4",
+      figure: "12",
+      title: "Active Learning ",
       description:
         " Students from around the world come together across our two lively Alanya campuses, learning, growing, and making lifelong friends.",
     },
     {
-      figure: "50+",
-      title: "Title 5",
+      figure: "32",
+      title: "Dedicated Teachers",
       description:
         " Students from around the world come together across our two lively Alanya campuses, learning, growing, and making lifelong friends.",
     },
     {
       figure: "20+",
-      title: "Title 6",
+      title: "Mediterranean Lifestyle",
       description:
         " Students from around the world come together across our two lively Alanya campuses, learning, growing, and making lifelong friends.",
     },
@@ -125,32 +126,23 @@ export default function Features() {
 
   const icons = [
     {
-      icon: <Medal size={40} strokeWidth={1} />,
-    },
-    {
-      icon: <Earth size={40} strokeWidth={1} />,
-    },
-    {
-      icon: <BookOpenCheck size={40} strokeWidth={1} />,
+      icon: <Globe size={40} strokeWidth={1} />,
     },
     {
       icon: <GraduationCap size={40} strokeWidth={1} />,
     },
     {
-      icon: <Trophy size={40} strokeWidth={1} />,
+      icon: <Landmark size={40} strokeWidth={1} />,
     },
     {
-      icon: <LandPlot size={40} strokeWidth={1} />,
+      icon: <BrainCircuit size={40} strokeWidth={1} />,
     },
-    // {
-    //   icon: <Medal size={40} strokeWidth={1} />,
-    // },
-    // {
-    //   icon: <Earth size={40} strokeWidth={1} />,
-    // },
-    // {
-    //   icon: <BookOpenCheck size={40} strokeWidth={1} />,
-    // },
+    {
+      icon: <BookOpen size={40} strokeWidth={1} />,
+    },
+    {
+      icon: <Waves size={40} strokeWidth={1} />,
+    },
   ];
   return (
     <div className="py-20 lg:py-40 bg-foreground">

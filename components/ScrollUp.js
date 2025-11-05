@@ -33,7 +33,7 @@ const ScrollUp = () => {
               />
             </Link>
           </div> */}
-          <div className="fixed z-50 h-10 w-10 bottom-5 right-32 cursor-pointer text-slate-50 bg-aisa-blue rounded-full flex flex-col justify-center items-center">
+          <div className="fixed z-50 h-10 w-10 bottom-5 right-10 cursor-pointer text-slate-50 bg-aisa-blue rounded-full flex flex-col justify-center items-center">
             <ArrowUp onClick={scrollToTopHandler} />
           </div>
         </div>
