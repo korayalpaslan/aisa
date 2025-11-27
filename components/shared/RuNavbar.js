@@ -99,17 +99,25 @@ export default function RuNavbar() {
       >
         <div className="h-screen w-full flex flex-col">
           <div className="font-serif text-2xl lg:text-5xl text-background px-10 lg:p-20 flex-1 mt-10">
-            <ul className="space-y-5 lg:space-y-10">
+            <ul className="space-y-5 lg:space-y-10 pb-5">
               <li>Our School</li>
               <li>Admissions</li>
               <li>Student Life</li>
               <li>Latest News</li>
             </ul>
-            <ul className="mt-5 py-5 border-t border-t-gray-500 space-y-5 lg:space-y-10">
-              <li className="text-aisa-blue">Prep School</li>
-              <li className="text-aisa-yellow">Primary School</li>
-              <li className="text-aisa-red">Middle School</li>
-              <li className="text-aisa-green">High School</li>
+            <ul className="mt-5 py-10 border-t border-t-gray-500 flex flex-col space-y-5 lg:space-y-10">
+              <Link href="/en/preschool" className="text-aisa-blue">
+                Pre School
+              </Link>
+              <Link href="/en/elementary-school" className="text-aisa-yellow">
+                Elementary School
+              </Link>
+              <Link href="/en/middle-school" className="text-aisa-red">
+                Middle School
+              </Link>
+              <Link href="/en/high-school" className="text-aisa-green">
+                High School
+              </Link>
             </ul>
           </div>
         </div>

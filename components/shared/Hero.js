@@ -3,21 +3,21 @@ import React from "react";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 
-export default function Hero() {
+export default function Hero({ title, subtitle }) {
   return (
-    <div className="bg-foreground relative top-0 w-full flex flex-col justify-center items-center h-[50vh]">
+    <div className="bg-foreground relative top-0 w-full flex flex-col justify-center items-center h-[70vh] lg:h-[50vh]">
       <h1 className="text-background text-4xl lg:text-5xl font-serif mb-2">
-        Preschool
+        {title}
       </h1>
       <p className="mb-4 text-2xl text-center text-background font-serif">
-        The Magical Beginning of Learning
+        {subtitle}
       </p>
       <div className="flex items-center space-x-1 text-gray-400 text-sm">
         <Link href="/" className="font-bold">
           Main Page
         </Link>
         <ChevronRight />
-        <span>Preschool</span>
+        <span> {title}</span>
       </div>
       <Image
         src="/pattern.png"
