@@ -147,11 +147,11 @@ export default function HeroDesktop() {
             Without Borders
           </div>
         </div>
-        <div className="flex justify-center box-4 opacity-0 -translate-y-[200px]">
+        {/* <div className="flex justify-center box-4 opacity-0 -translate-y-[200px]">
           <button className="bg-aisa-yellow px-6 py-2 rounded-4xl font-semibold text-foreground text-sm hover:bg-yellow-500 duration-300 transition-all ease-in-out cursor-pointer">
             Book a Campus Tour
           </button>
-        </div>
+        </div> */}
       </div>
 
       <div className="h-[400vh] relative box-5 opacity-0 z-10" ref={container}>

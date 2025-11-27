@@ -15,7 +15,7 @@ export default function Welcome() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h2 className="font-serif text-4xl lg:text-5xl">
-            Hear from Our Principal
+            Hear from Our Founder
           </h2>
           <h4 className="text-xl font-bold">
             When you walk through our campus, you’ll feel something special — a
@@ -34,7 +34,7 @@ export default function Welcome() {
             that makes this school so alive. At AISA, we’re more than a school —
             we’re a family that grows together.
           </p>
-          <p className="text-sm font-semibold">Erdal Sayi, School Principal</p>
+          <p className="text-sm font-semibold">Erdal Sayi, Founder</p>
         </motion.div>
         <div className="w-full lg:w-1/2 relative">
           <div>

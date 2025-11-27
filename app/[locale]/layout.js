@@ -30,7 +30,6 @@ export default async function RootLayout({ children }) {
         <body
           className={`${manrope.variable} ${garamond.variable} antialiased`}
         >
-          <Navbar />
           {children}
           <Footer />
         </body>

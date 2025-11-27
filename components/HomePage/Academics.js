@@ -27,7 +27,7 @@ export default function Academics() {
           >
             From Early Years to High School, students grow with purpose.
           </motion.p>
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
@@ -36,7 +36,7 @@ export default function Academics() {
             <button className="bg-aisa-yellow px-6 py-2 rounded-4xl font-semibold text-foreground text-sm hover:bg-yellow-500 duration-300 transition-all ease-in-out cursor-pointer">
               Start your application
             </button>
-          </motion.div>
+          </motion.div> */}
         </div>
 
         <motion.ul

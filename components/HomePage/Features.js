@@ -18,28 +18,27 @@ export default function Features() {
   const [index, setIndex] = useState(0);
   const stats = [
     {
-      figure: "400+",
+      figure: "30+",
       title: "Global Diversity ",
       description:
-        "400+ students from more than 30 countries call AISA home. Across our two lively campuses, they learn, grow, and make lifelong friends while experiencing a truly international education.",
+        "Our students from more than 30 countries call AISA home. Across our two lively campuses, they learn, grow, and make lifelong friends while experiencing a truly international education.",
     },
     {
-      figure: "98",
-      title: "Academic Excellence",
+      figure: "400+",
+      title: "Graduates",
       description:
-        " Students from around the world come together across our two lively Alanya campuses, learning, growing, and making lifelong friends.",
+        "More than 400 of our graduates are continuing their education all around the world.",
     },
     {
-      figure: "2",
-      title: "Modern Campuses",
-      description:
-        " Students from around the world come together across our two lively Alanya campuses, learning, growing, and making lifelong friends.",
+      figure: "100%",
+      title: "Success",
+      description: "We have achieved a 100% university placement success rate.",
     },
     {
-      figure: "12",
-      title: "Active Learning ",
+      figure: "20",
+      title: "Years of experience",
       description:
-        " Students from around the world come together across our two lively Alanya campuses, learning, growing, and making lifelong friends.",
+        "With 20 years of experience, we keep diversity and inclusion at the heart of education.",
     },
     {
       figure: "32",
@@ -203,7 +202,7 @@ export default function Features() {
               {stats[index].figure}
             </h2>
             <h4 className="font-semibold text-xl mb-2">{stats[index].title}</h4>
-            <p className="lg:w-2/3">{stats[index].description}</p>
+            <p className="lg:w-2/3 font-light">{stats[index].description}</p>
           </motion.div>
         </motion.div>
       </div>

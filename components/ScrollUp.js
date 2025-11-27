@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const ScrollUp = () => {
   const [showArrow, setshowArrow] = useState(false);
-  console.log(`Arrow ${showArrow}`);
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 200) {
