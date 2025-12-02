@@ -99,24 +99,64 @@ export default function Navbar() {
       >
         <div className="h-screen w-full flex flex-col">
           <div className="font-serif text-2xl lg:text-5xl text-background px-10 lg:p-20 flex-1 mt-10">
-            <ul className="space-y-5 lg:space-y-10 pb-5">
-              <li>Our School</li>
-              <li>Admissions</li>
-              <li>Student Life</li>
-              <li>Latest News</li>
+            <ul className="space-y-5 lg:space-y-10 pb-5 flex flex-col ">
+              <Link
+                href="/en/student-life"
+                className=""
+                onClick={() => setIsOpen(false)}
+              >
+                <span> Our School</span>
+              </Link>
+              <Link
+                href="/en/student-life"
+                className=""
+                onClick={() => setIsOpen(false)}
+              >
+                <span> Admissions</span>
+              </Link>
+              <Link
+                href="/en/student-life"
+                className=""
+                onClick={() => setIsOpen(false)}
+              >
+                <span>Student Life</span>
+              </Link>
+              <Link
+                href="/en/student-life"
+                className=""
+                onClick={() => setIsOpen(false)}
+              >
+                <span> Latest News</span>
+              </Link>
             </ul>
             <ul className="mt-5 py-10 border-t border-t-gray-500 flex flex-col space-y-5 lg:space-y-10">
-              <Link href="/en/preschool" className="text-aisa-blue">
-                Pre School
+              <Link
+                href="/en/preschool"
+                className="text-aisa-blue"
+                onClick={() => setIsOpen(false)}
+              >
+                <span>Pre School</span>
               </Link>
-              <Link href="/en/elementary-school" className="text-aisa-yellow">
-                Elementary School
+              <Link
+                href="/en/elementary-school"
+                className="text-aisa-yellow"
+                onClick={() => setIsOpen(false)}
+              >
+                <span> Elementary School</span>
               </Link>
-              <Link href="/en/middle-school" className="text-aisa-red">
-                Middle School
+              <Link
+                href="/en/middle-school"
+                className="text-aisa-red"
+                onClick={() => setIsOpen(false)}
+              >
+                <span> Middle School</span>
               </Link>
-              <Link href="/en/high-school" className="text-aisa-green">
-                High School
+              <Link
+                href="/en/high-school"
+                className="text-aisa-green"
+                onClick={() => setIsOpen(false)}
+              >
+                <span> High School</span>
               </Link>
             </ul>
           </div>

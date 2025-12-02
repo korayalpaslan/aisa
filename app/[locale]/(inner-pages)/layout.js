@@ -1,6 +1,6 @@
 import RuNavbar from "@/components/shared/RuNavbar";
 
-export default async function PrepLayout({ children }) {
+export default async function InnerLayout({ children }) {
   return (
     <div>
       <RuNavbar />

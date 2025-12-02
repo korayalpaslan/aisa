@@ -9,6 +9,7 @@ export default function MiddleSchoolPage() {
       <Hero
         title="Middle School"
         subtitle="Empowering Young Leaders of Change"
+        className="bg-foreground"
       />
       <Intro
         title="Our Approach"
