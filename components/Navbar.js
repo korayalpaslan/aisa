@@ -90,7 +90,7 @@ export default function Navbar() {
         </div>
       </div>
       <motion.div
-        className={`absolute top-0 right-0 origin-top-right ${
+        className={`absolute top-0 right-0 origin-top-right overflow-hidden ${
           isOpen ? "z-20 bg-foreground opacity-100" : "-z-10 opacity-0"
         }`}
         variants={variants}
