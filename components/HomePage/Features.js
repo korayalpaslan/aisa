@@ -8,7 +8,7 @@ import {
   GraduationCap,
   Landmark,
   BookOpen,
-  Waves,
+  UserRound,
 } from "lucide-react";
 
 export default function Features() {
@@ -35,41 +35,22 @@ export default function Features() {
       description: "We have achieved a 100% university placement success rate.",
     },
     {
+      figure: "14",
+      title: "Countries Bringing Worldwide Expertise",
+      description: "Teachers from 14 different countries guided our students.",
+    },
+    {
       figure: "20",
       title: "Years of experience",
       description:
-        "With 20 years of experience, we keep diversity and inclusion at the heart of education.",
+        "We place diversity and inclusion at the heart of education.",
     },
     {
-      figure: "32",
-      title: "Dedicated Teachers",
+      figure: "1",
+      title: "Community",
       description:
-        " Students from around the world come together across our two lively Alanya campuses, learning, growing, and making lifelong friends.",
+        "We are a small yet closely connected community where every child is known by their own name.",
     },
-    {
-      figure: "20+",
-      title: "Mediterranean Lifestyle",
-      description:
-        " Students from around the world come together across our two lively Alanya campuses, learning, growing, and making lifelong friends.",
-    },
-    // {
-    //   figure: "400+",
-    //   title: "Enrolled Student",
-    //   description:
-    //     " Students from around the world come together across our two lively Alanya campuses, learning, growing, and making lifelong friends.",
-    // },
-    // {
-    //   figure: "300+",
-    //   title: "Title 2",
-    //   description:
-    //     " Students from around the world come together across our two lively Alanya campuses, learning, growing, and making lifelong friends.",
-    // },
-    // {
-    //   figure: "200+",
-    //   title: "Title 3",
-    //   description:
-    //     " Students from around the world come together across our two lively Alanya campuses, learning, growing, and making lifelong friends.",
-    // },
   ];
 
   const getDistance = (row, col) => {
@@ -140,7 +121,7 @@ export default function Features() {
       icon: <BookOpen size={40} strokeWidth={1} />,
     },
     {
-      icon: <Waves size={40} strokeWidth={1} />,
+      icon: <UserRound size={40} strokeWidth={1} />,
     },
   ];
   return (

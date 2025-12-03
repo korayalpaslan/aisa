@@ -101,7 +101,7 @@ export default function Navbar() {
           <div className="font-serif text-2xl lg:text-5xl text-background px-10 lg:p-20 flex-1 mt-10">
             <ul className="space-y-5 lg:space-y-10 pb-5 flex flex-col ">
               <Link
-                href="/en/student-life"
+                href="/en/our-school"
                 className=""
                 onClick={() => setIsOpen(false)}
               >

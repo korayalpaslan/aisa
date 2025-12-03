@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="px-10 flex flex-col lg:flex-row lg:justify-between w-full lg:space-x-20">
         <div className="flex flex-col items-center lg:items-start space-y-10 w-full lg:w-1/4  text-background">
           <h2 className="font-serif text-4xl lg:text-5xl text-center lg:text-start order-2 lg:order-1">
-            Preparing for a remarkable future{" "}
+            Great futures start with happy beginnings
           </h2>
           <div className="order-1 lg:order-2">
             <Image

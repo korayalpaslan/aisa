@@ -26,8 +26,8 @@ export default function Intro() {
           transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
           className="text-2xl lg:text-3xl font-serif text-center mb-10"
         >
-          AISA offers a K–12 international education in Alanya—where curiosity,
-          character, and academic ambition grow together.
+          A warm, safe, and inspiring American education designed for young
+          learners in the heart of Alanya
         </motion.p>
         {/* <motion.div
           initial={{ opacity: 0, y: 50 }}
