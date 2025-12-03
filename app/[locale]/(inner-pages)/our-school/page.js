@@ -1,5 +1,5 @@
 import CampusContainer from "@/components/OurSchoolPage/CampusContainer";
-import SafeGuarding from "@/components/OurSchoolPage/SafeGuarding";
+import SafeGuarding from "@/components/OurSchoolPage/Safeguarding";
 import Facilities from "@/components/OurSchoolPage/Facilities";
 import Philosophy from "@/components/OurSchoolPage/Philosophy";
 import SchoolIntro from "@/components/OurSchoolPage/SchoolIntro";

@@ -14,9 +14,7 @@ export default function SafaGuarding() {
           viewport={{ margin: "-100px 0px", once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h2 className="font-serif text-4xl lg:text-5xl">
-            Safe Guardingn Policy
-          </h2>
+          <h2 className="font-serif text-4xl lg:text-5xl">Safe Guarding</h2>
           <ul className="list-disc ml-5 space-y-6">
             <li>
               <strong className="font-bold">Advanced Academic Program:</strong>{" "}
