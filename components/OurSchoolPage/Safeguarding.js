@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
 
-export default function SafaGuardng() {
+export default function SafaGuarding() {
   return (
     <div className="pt-20 pb-20 lg:pb-60">
       <div className="wrapper flex flex-col lg:flex-row space-y-10 lg:space-y-0 lg:space-x-40">
@@ -14,7 +14,9 @@ export default function SafaGuardng() {
           viewport={{ margin: "-100px 0px", once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h2 className="font-serif text-4xl lg:text-5xl">Safe Guarding</h2>
+          <h2 className="font-serif text-4xl lg:text-5xl">
+            Safe Guardingn Policy
+          </h2>
           <ul className="list-disc ml-5 space-y-6">
             <li>
               <strong className="font-bold">Advanced Academic Program:</strong>{" "}
