@@ -15,13 +15,11 @@ export default function SchoolIntro() {
             environment where English is acquired naturally through play.
           </p>
           <p className="mb-4">
-            <p className="mb-4">
-              As students advance to Primary School, we transition from gentle
-              guidance to structured academic excellence. Our American
-              curriculum uniquely balances creativity with discipline, ensuring
-              mastery in core subjects like Mathematics and Science while
-              fostering the critical thinking skills of tomorrow.
-            </p>
+            As students advance to Primary School, we transition from gentle
+            guidance to structured academic excellence. Our American curriculum
+            uniquely balances creativity with discipline, ensuring mastery in
+            core subjects like Mathematics and Science while fostering the
+            critical thinking skills of tomorrow.
           </p>
           <p className="mb-4">
             We honor your child&apos;s cultural identity within a truly

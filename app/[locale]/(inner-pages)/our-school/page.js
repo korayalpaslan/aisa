@@ -15,6 +15,7 @@ export default function OurSchoolPage() {
         subtitle="From Curiosity to Academic Mastery"
         className="bg-red-950"
       />
+
       <SchoolIntro />
       <Why />
       <CampusContainer />

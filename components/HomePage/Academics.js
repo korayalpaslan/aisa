@@ -56,10 +56,7 @@ export default function Academics() {
                   alt="prep"
                   className="h-80 w-full object-cover rounded-t-md"
                 />
-                <Link
-                  href="/en/preschool"
-                  className="space-y-1 flex flex-col justify-center grow px-6 cursor-pointer"
-                >
+                <div className="space-y-1 flex flex-col justify-center grow px-6 cursor-pointer">
                   <h3 className="text-xl font-semibold flex items-center">
                     Preschool{" "}
                     <span className="ml-2">
@@ -67,7 +64,7 @@ export default function Academics() {
                     </span>
                   </h3>
                   <p className="text-sm font-light">Ages 3 - 6</p>
-                </Link>
+                </div>
               </div>
             </Link>
           </li>

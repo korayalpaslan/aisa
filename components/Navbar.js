@@ -1,14 +1,31 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import { useRouter, usePathname } from "next/navigation";
 import { useAnimate, motion, AnimatePresence } from "motion/react";
 import { Menu, X } from "lucide-react";
 import ScrollUp from "./ScrollUp";
-import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scope, animate] = useAnimate();
+  const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
+
+  // HIDE loading overlay when route changes finish
+  useEffect(() => {
+    setIsLoading(false);
+  }, [pathname]);
+
+  function navigateAfterClose(href) {
+    setIsOpen(false); // start closing animation
+    setIsLoading(true); // show loading overlay immediately
+
+    setTimeout(() => {
+      router.push(href);
+    }, 220); // match your menu close duration
+  }
 
   const variants = {
     open: {
@@ -100,69 +117,79 @@ export default function Navbar() {
         <div className="h-screen w-full flex flex-col">
           <div className="font-serif text-2xl lg:text-5xl text-background px-10 lg:p-20 flex-1 mt-10">
             <ul className="space-y-5 lg:space-y-10 pb-5 flex flex-col ">
-              <Link
-                href="/en/our-school"
-                className=""
-                onClick={() => setIsOpen(false)}
+              <li
+                onClick={() => navigateAfterClose("/en/our-school")}
+                className="cursor-pointer"
               >
                 <span> Our School</span>
-              </Link>
-              <Link
-                href="/en/student-life"
-                className=""
-                onClick={() => setIsOpen(false)}
+              </li>
+              <li
+                onClick={() => navigateAfterClose("/en/admissions")}
+                className="cursor-pointer"
               >
                 <span> Admissions</span>
-              </Link>
-              <Link
-                href="/en/student-life"
-                className=""
-                onClick={() => setIsOpen(false)}
+              </li>
+              <li
+                onClick={() => navigateAfterClose("/en/student-life")}
+                className="cursor-pointer"
               >
                 <span>Student Life</span>
-              </Link>
-              <Link
-                href="/en/student-life"
-                className=""
-                onClick={() => setIsOpen(false)}
+              </li>
+              <li
+                onClick={() => navigateAfterClose("/en/news")}
+                className="cursor-pointer"
               >
                 <span> Latest News</span>
-              </Link>
+              </li>
             </ul>
             <ul className="mt-5 py-10 border-t border-t-gray-500 flex flex-col space-y-5 lg:space-y-10">
-              <Link
-                href="/en/preschool"
-                className="text-aisa-blue"
-                onClick={() => setIsOpen(false)}
+              <li
+                className="text-aisa-blue cursor-pointer"
+                onClick={() => navigateAfterClose("/en/preschool")}
               >
                 <span>Pre School</span>
-              </Link>
-              <Link
-                href="/en/elementary-school"
-                className="text-aisa-yellow"
-                onClick={() => setIsOpen(false)}
+              </li>
+              <li
+                className="text-aisa-yellow cursor-pointer"
+                onClick={() => navigateAfterClose("/en/elementary-school")}
               >
                 <span> Elementary School</span>
-              </Link>
-              <Link
-                href="/en/middle-school"
-                className="text-aisa-red"
-                onClick={() => setIsOpen(false)}
+              </li>
+              <li
+                className="text-aisa-red cursor-pointer"
+                onClick={() => navigateAfterClose("/en/middle-school")}
               >
                 <span> Middle School</span>
-              </Link>
-              <Link
-                href="/en/high-school"
-                className="text-aisa-green"
-                onClick={() => setIsOpen(false)}
+              </li>
+              <li
+                className="text-aisa-green cursor-pointer"
+                onClick={() => navigateAfterClose("/en/high-school")}
               >
                 <span> High School</span>
-              </Link>
+              </li>
             </ul>
           </div>
         </div>
       </motion.div>
       <ScrollUp />
+      {isLoading && (
+        <div className="fixed inset-0 bg-foreground text-background flex items-center justify-center z-200">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="text-xl animate-pulse"
+          >
+            <Image
+              src="/images/01.png"
+              width={250}
+              height={250}
+              alt="logo"
+              className="object-cover w-[200px] lg:w-[250px]"
+            />
+          </motion.div>
+        </div>
+      )}
     </div>
   );
 }
