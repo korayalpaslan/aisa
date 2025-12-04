@@ -14,7 +14,7 @@ export default function CampusContainer() {
           viewport={{ margin: "-100px 0px", once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          Experience a sense of belonging
+          Designed for Discovery, Built for Safety
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 50 }}
@@ -23,12 +23,12 @@ export default function CampusContainer() {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           className="max-w-4xl mx-auto text-center text-xl"
         >
-          Experience a sense of belonging.” Alt metin: “With students and
-          families from around the world, AISA celebrates diversity while
-          building a strong sense of community. We believe learning happens best
-          when everyone feels accepted and connected. Our students grow as
-          confident, kind, and open-minded individuals — ready to make a
-          difference wherever life takes them.
+          Nestled in the peaceful greenery of Alanya, our campus is a secure
+          ecosystem designed specifically for young learners. More than just
+          classrooms, we offer *sun-filled learning spaces, modern science labs,
+          and safe, active playgrounds*. Every corner of AISA is crafted to
+          inspire curiosity while providing the physical safety and warm
+          atmosphere that makes our students feel right at home.
         </motion.p>
       </div>
       <motion.div

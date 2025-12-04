@@ -180,7 +180,7 @@ export default function RuNavbar() {
       </motion.div>
       <ScrollUp />
       {isLoading && (
-        <div className="fixed inset-0 bg-foreground text-background flex items-center justify-center z-200">
+        <div className="fixed inset-0 bg-foreground text-background flex items-center justify-center z-9999">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

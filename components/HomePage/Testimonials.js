@@ -23,12 +23,11 @@ export default function Testimonials() {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           className="max-w-4xl mx-auto text-center text-xl"
         >
-          Experience a sense of belonging.” Alt metin: “With students and
-          families from around the world, AISA celebrates diversity while
-          building a strong sense of community. We believe learning happens best
-          when everyone feels accepted and connected. Our students grow as
-          confident, kind, and open-minded individuals — ready to make a
-          difference wherever life takes them.
+          With students and families from around the world, AISA celebrates
+          diversity while building a strong sense of community. We believe
+          learning happens best when everyone feels accepted and connected. Our
+          students grow as confident, kind, and open-minded individuals — ready
+          to make a difference wherever life takes them.
         </motion.p>
       </div>
       <motion.div
