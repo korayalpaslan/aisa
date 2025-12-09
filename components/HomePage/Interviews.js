@@ -15,25 +15,25 @@ import parent1 from "@/public/images/testimonials/parent-1.jpeg";
 const data = [
   {
     src: student1,
-    title: "Sophie's story",
+    title: "Kyra's story",
     description: "Grade 10 Student",
     color: "#3bbbfb",
   },
   {
     src: student2,
-    title: "Thomas's story",
+    title: "Nikita's story",
     description: "Grade 12 Student",
     color: "#ffc621",
   },
   {
     src: teacher,
-    title: "Ayşe's story",
-    description: "Primary School Teacher",
+    title: "İrem's story",
+    description: "School Teacher",
     color: "#ff0909",
   },
   {
     src: parent1,
-    title: "Anna's story",
+    title: "Veronica's story",
     description: "Parent",
     color: "#3ea340",
   },
