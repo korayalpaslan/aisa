@@ -7,28 +7,32 @@ import {
   PrevButton,
   usePrevNextButtons,
 } from "./EmblaCarouselArrowButtons";
+import student1 from "@/public/images/testimonials/student.jpeg";
+import student2 from "@/public/images/testimonials/student-2.jpeg";
+import teacher from "@/public/images/testimonials/teacher.jpeg";
+import parent1 from "@/public/images/testimonials/parent-1.jpeg";
 
 const data = [
   {
-    src: "/images/testimonials-1.jpg",
+    src: student1,
     title: "Sophie's story",
     description: "Grade 10 Student",
     color: "#3bbbfb",
   },
   {
-    src: "/images/testimonials-2.jpg",
+    src: student2,
     title: "Thomas's story",
     description: "Grade 12 Student",
     color: "#ffc621",
   },
   {
-    src: "/images/testimonials-3.jpg",
-    title: "Gürcan's story",
+    src: teacher,
+    title: "Ayşe's story",
     description: "Primary School Teacher",
     color: "#ff0909",
   },
   {
-    src: "/images/testimonials-4.jpg",
+    src: parent1,
     title: "Anna's story",
     description: "Parent",
     color: "#3ea340",
@@ -71,6 +75,7 @@ const Interviews = () => {
                       fill
                       alt="testimonial-videos"
                       className="h-full w-full object-cover"
+                      placeholder="blur"
                     />
                     <div className="group/parent bg-foreground/50 hover:bg-foreground/20 transition-all duration-500 absolute top-0 left-0 right-0 bottom-0  text-background cursor-pointer">
                       <div className="group/child translate-y-28 hover:translate-y-0 transition-all duration-500 h-full w-full flex flex-col justify-end">
