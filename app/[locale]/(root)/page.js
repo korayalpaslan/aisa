@@ -10,9 +10,26 @@ import Testimonials from "@/components/HomePage/Testimonials";
 import Cta from "@/components/HomePage/Cta";
 import News from "@/components/HomePage/News";
 import Explore from "@/components/HomePage/Explore";
+import { client } from "@/lib/sanity";
+
+export const revalidate = 30;
+
+async function getNews() {
+  const query = `*[_type== 'news'] | order(_createdAt desc)[0...4] {
+  title,
+  "currentSlug":slug.current,
+  titleImage,
+  description,
+  newsDate
+}`;
+
+  const data = await client.fetch(query);
+  return data;
+}
 
 export default async function Home() {
   const locale = await getLocale();
+  const news = await getNews();
   return (
     <div className="w-full">
       <HeroMobile />
@@ -23,7 +40,7 @@ export default async function Home() {
       <Features />
       <Testimonials />
       <Cta />
-      <News />
+      <News news={news} />
       <Explore />
     </div>
   );

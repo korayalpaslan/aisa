@@ -8,8 +8,11 @@ import {
   NextButtonNews,
   PrevButtonNews,
 } from "./EmblaCarouselArrowButtonsNews";
+import { urlFor } from "@/lib/sanity";
+import Link from "next/link";
+import { localizedDate } from "@/lib/localizedDate";
 
-export default function News() {
+export default function News({ news }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ align: "start" });
 
   const {
@@ -18,36 +21,9 @@ export default function News() {
     onPrevButtonClick,
     onNextButtonClick,
   } = usePrevNextButtons(emblaApi);
-  const posts = [
-    {
-      id: 2,
-      title: "Excelence Shaped by People",
-      date: "10.10.2025",
-      description:
-        "At the American International School of Alanya, excellence is shaped by people. With more than 70% of its budget to staffing, AISA ensures students learn from highly qualified, internationally experienced educators who bring learning to life.",
-    },
-    {
-      id: 4,
-      title: "AISA’s Commitment to CPR and First Aid",
-      date: "02.10.2025",
-      description:
-        "At the American International School of Alanya, excellence is shaped by people. With more than 70% of its budget to staffing, AISA ensures students learn from highly qualified, internationally experienced educators who bring learning to life.",
-    },
-    {
-      id: 5,
-      title: "AISA Arts: A Year of Learning,Creativity, and Collaboration",
-      date: "18.09.2025",
-      description:
-        "At the American International School of Alanya, excellence is shaped by people. With more than 70% of its budget to staffing, AISA ensures students learn from highly qualified, internationally experienced educators who bring learning to life.",
-    },
-    {
-      id: 6,
-      title: "More Than Tropies: A Year of Growth, Friendship, and Lion Pride",
-      date: "10.09.2025",
-      description:
-        "At the American International School of Alanya, excellence is shaped by people. With more than 70% of its budget to staffing, AISA ensures students learn from highly qualified, internationally experienced educators who bring learning to life.",
-    },
-  ];
+
+  const firstNews = news.at(0);
+
   return (
     <div>
       <div className="wrapper py-20">
@@ -70,7 +46,7 @@ export default function News() {
           <div className="w-1/2 flex flex-col space-y-5">
             <div>
               <Image
-                src={`/images/${posts.at(0).id}.jpg`}
+                src={urlFor(firstNews.titleImage).width(1000).quality(80).url()}
                 width={1000}
                 height={1000}
                 alt="news"
@@ -79,12 +55,12 @@ export default function News() {
             </div>
             <div>
               <span className="text-gray-500 text-sm font-semibold mb-2">
-                {posts.at(0).date}
+                {localizedDate(news.at(0).newsDate)}
               </span>
               <h1 className="text-2xl font-semibold mb-2">
-                {posts.at(0).title}
+                {news.at(0).title}
               </h1>
-              <p className="text-sm mb-6"> {posts.at(0).description}</p>
+              <p className="text-sm mb-6"> {news.at(0).description}</p>
               <div>
                 <button className="bg-aisa-yellow px-6 py-2 rounded-4xl font-semibold text-foreground text-sm">
                   Read More
@@ -93,12 +69,15 @@ export default function News() {
             </div>
           </div>
           <div className="w-1/2 flex flex-col space-y-10">
-            {posts.slice(1).map((post, i) => {
+            {news.slice(1).map((post, i) => {
               return (
-                <div key={post.id} className="flex space-x-2">
+                <div key={i} className="flex space-x-2">
                   <div className="w-1/3">
                     <Image
-                      src={`/images/${post.id}.jpg`}
+                      src={urlFor(post.titleImage)
+                        .width(1000)
+                        .quality(80)
+                        .url()}
                       width={500}
                       height={500}
                       alt="news"
@@ -106,11 +85,12 @@ export default function News() {
                     />
                   </div>
                   <div className="flex-1 flex flex-col">
-                    <span className="text-gray-500 text-sm font-semibold mb-2">
-                      {post.date}
-                    </span>
-                    <h2 className="font-semibold">{post.title}</h2>
-                    <div className="mt-auto text-sm">
+                    <p className="text-gray-600 text-sm mb-1">
+                      {" "}
+                      {localizedDate(post.newsDate)}
+                    </p>
+                    <h2 className="font-semibold md:w-2/3">{post.title}</h2>
+                    <div className="mt-4 text-sm">
                       <button className="flex items-center space-x-1">
                         <span>Read More </span>
                         <ArrowRight size={16} />
@@ -145,11 +125,14 @@ export default function News() {
 
             <div className="embla__viewport" ref={emblaRef}>
               <div className="embla__container ">
-                {posts.map((post, index) => (
+                {news.map((post, index) => (
                   <div className="embla__slide" key={index}>
                     <div className="embla__slide__number">
                       <Image
-                        src={`/images/${post.id}.jpg`}
+                        src={urlFor(post.titleImage)
+                          .width(1000)
+                          .quality(80)
+                          .url()}
                         width={500}
                         height={500}
                         alt="news"
@@ -157,12 +140,12 @@ export default function News() {
                       />
                     </div>
                     <div className="flex flex-col mt-2 mb-10">
-                      <div className="py-2 flex justify-between">
+                      {/* <div className="py-2 flex justify-between">
                         <span className="text-base text-gray-500">
                           {" "}
                           {post.date}
                         </span>
-                      </div>
+                      </div> */}
 
                       <h2 className="py-3 font-semibold text-2xl">
                         {" "}

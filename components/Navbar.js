@@ -124,7 +124,7 @@ export default function Navbar() {
                 <span> Our School</span>
               </li>
               <li
-                onClick={() => navigateAfterClose("/en/admissions")}
+                onClick={() => navigateAfterClose("/en/admission")}
                 className="cursor-pointer"
               >
                 <span> Admissions</span>

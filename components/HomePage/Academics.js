@@ -18,7 +18,7 @@ export default function Academics() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             className="font-serif text-4xl lg:text-5xl text-center mb-2"
           >
-            The Perfect Start for Your Child&apos;s Global Journey
+            Explore our learning pathway
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 50 }}
@@ -26,7 +26,7 @@ export default function Academics() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
             className="font-sans text-xl text-center mb-5"
           >
-            Explore our learning pathway
+            The Perfect Start for Your Child&apos;s Global Journey
           </motion.p>
           {/* <motion.div
             initial={{ opacity: 0, y: 50 }}
