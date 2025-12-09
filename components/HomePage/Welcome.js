@@ -2,6 +2,8 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
+import welcomeOne from "@/public/images/welcome-1.jpg";
+import welcomeTwo from "@/public/images/welcome-2.jpg";
 
 export default function Welcome() {
   return (
@@ -39,11 +41,12 @@ export default function Welcome() {
         <div className="w-full lg:w-1/2 relative">
           <div>
             <Image
-              src="/images/welcome-2.jpg"
+              src={welcomeTwo}
               width={350}
               height={350}
               className="object-cover rounded-md lg:hidden h-[350px] object-top w-full"
-              alt="school_manager_pic "
+              alt="school_manager_pic"
+              placeholder="blur"
             />
           </div>
           <motion.div
@@ -54,20 +57,22 @@ export default function Welcome() {
           >
             <div className="relative h-full w-full">
               <Image
-                src="/images/welcome-1.jpg"
+                src={welcomeOne}
                 width={1000}
                 height={1000}
                 className="object-cover rounded-md hidden lg:block"
-                alt="school_manager_pic "
+                alt="school_manager_pic"
+                placeholder="blur"
               />
 
               <Image
-                src="/images/welcome-2.jpg"
+                src={welcomeTwo}
                 width={250}
                 height={250}
                 className="object-cover absolute bottom-0 h-[250px] object-top 
                 -translate-x-1/2 translate-y-1/2 rounded-md hidden lg:block"
                 alt="school_manager_pic"
+                placeholder="blur"
               />
             </div>
           </motion.div>

@@ -4,6 +4,10 @@ import React, { useRef } from "react";
 import { useInView, motion } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import prep from "@/public/images/prep.jpg";
+import primary from "@/public/images/primary.jpg";
+import middle from "@/public/images/middle.jpg";
+import high from "@/public/images/high.jpg";
 
 export default function Academics() {
   const ref = useRef(null);
@@ -11,7 +15,7 @@ export default function Academics() {
   return (
     <div className="bg-foreground text-background py-20">
       <div className="wrapper" ref={ref}>
-        <div className="lg:h-[50vh] lg:sticky lg:top-16 lg:mb-32 mb-16">
+        <div className="lg:h-[50vh] lg:sticky lg:top-16 lg:mb-36 mb-16">
           <motion.h1
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -28,16 +32,6 @@ export default function Academics() {
           >
             The Perfect Start for Your Child&apos;s Global Journey
           </motion.p>
-          {/* <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
-            className="flex justify-center"
-          >
-            <button className="bg-aisa-yellow px-6 py-2 rounded-4xl font-semibold text-foreground text-sm hover:bg-yellow-500 duration-300 transition-all ease-in-out cursor-pointer">
-              Start your application
-            </button>
-          </motion.div> */}
         </div>
 
         <motion.ul
@@ -46,96 +40,93 @@ export default function Academics() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         >
-          <li>
-            <Link href="/en/preschool" className="w-auto flex items-center">
-              <div className="h-[400px] w-full sm:w-[350px] rounded-md bg-aisa-blue flex flex-col relative">
+          <li className="w-full">
+            <Link href="/en/preschool" className="w-auto">
+              <div className="h-[350px] w-full rounded-md bg-aisa-blue flex flex-col relative">
                 <Image
-                  src="/images/prep.jpg"
-                  width={320}
-                  height={300}
+                  src={prep}
+                  fill
                   alt="prep"
                   className="h-80 w-full object-cover rounded-t-md"
+                  placeholder="blur"
                 />
-                <div className="space-y-1 flex flex-col justify-center grow px-6 cursor-pointer">
-                  <h3 className="text-xl font-semibold flex items-center">
-                    Preschool{" "}
-                    <span className="ml-2">
-                      <ArrowUpRight />
-                    </span>
-                  </h3>
-                  <p className="text-sm font-light">Ages 3 - 6</p>
-                </div>
               </div>
             </Link>
+            <div className="space-y-1 flex flex-col justify-center grow px-6 cursor-pointer bg-aisa-blue py-3 rounded-b-md">
+              <h3 className="text-xl font-semibold flex items-center">
+                Preschool{" "}
+                <span className="ml-2">
+                  <ArrowUpRight />
+                </span>
+              </h3>
+              <p className="text-sm font-light">Ages 3 - 6</p>
+            </div>
           </li>
-          <li>
-            <Link
-              href="/en/elementary-school"
-              className="w-auto flex items-center"
-            >
-              <div className="h-[400px] w-full sm:w-[350px] rounded-md bg-aisa-yellow flex flex-col relative">
+          <li className="w-full">
+            <Link href="/en/elementary-school" className="w-auto">
+              <div className="h-[350px] w-full  rounded-md bg-aisa-yellow flex flex-col relative">
                 <Image
-                  src="/images/primary.jpg"
-                  width={320}
-                  height={300}
+                  src={primary}
+                  fill
                   alt="prep"
                   className="h-80 w-full object-cover rounded-t-md"
+                  placeholder="blur"
                 />
-                <div className="space-y-1 flex flex-col justify-center grow px-6">
-                  <h3 className="text-xl font-semibold flex items-center">
-                    Primary School{" "}
-                    <span className="ml-2">
-                      <ArrowUpRight />
-                    </span>
-                  </h3>
-                  <p className="text-sm font-light">Ages 7 - 10</p>
-                </div>
               </div>
             </Link>
+            <div className="space-y-1 flex flex-col justify-center grow px-6 bg-aisa-yellow py-3 rounded-b-md">
+              <h3 className="text-xl font-semibold flex items-center">
+                Primary School{" "}
+                <span className="ml-2">
+                  <ArrowUpRight />
+                </span>
+              </h3>
+              <p className="text-sm font-light">Ages 7 - 10</p>
+            </div>
           </li>
-          <li>
-            <Link href="/en/middle-school" className="w-auto flex items-center">
-              <div className="h-[400px] w-full sm:w-[350px] rounded-md bg-aisa-red flex flex-col relative">
+          <li className="w-full">
+            <Link href="/en/middle-school" className="w-auto">
+              <div className="h-[350px] w-full rounded-md bg-aisa-red flex flex-col relative">
                 <Image
-                  src="/images/middle.jpg"
-                  width={320}
-                  height={300}
+                  src={middle}
+                  fill
                   alt="prep"
                   className="h-80 w-full object-cover rounded-t-md"
+                  placeholder="blur"
                 />
-                <div className="space-y-1 flex flex-col justify-center grow px-6">
-                  <h3 className="text-xl font-semibold flex items-center">
-                    Middle School{" "}
-                    <span className="ml-2">
-                      <ArrowUpRight />
-                    </span>
-                  </h3>
-                  <p className="text-sm font-light">Ages 11 - 14</p>
-                </div>
               </div>
             </Link>
+            <div className="space-y-1 flex flex-col justify-center grow px-6 bg-aisa-red py-3 rounded-b-md">
+              <h3 className="text-xl font-semibold flex items-center">
+                Middle School{" "}
+                <span className="ml-2">
+                  <ArrowUpRight />
+                </span>
+              </h3>
+              <p className="text-sm font-light">Ages 11 - 14</p>
+            </div>
           </li>
-          <li>
-            <Link href="/en/high-school" className="w-auto flex items-center">
-              <div className="h-[400px] w-full sm:w-[350px] rounded-md bg-aisa-green flex flex-col relative">
+          <li className="w-full">
+            <Link href="/en/high-school" className="w-auto">
+              <div className="h-[350px] w-full rounded-md bg-aisa-green flex flex-col relative">
                 <Image
-                  src="/images/high.jpg"
-                  width={320}
-                  height={300}
+                  src={high}
+                  fill
                   alt="prep"
                   className="h-80 w-full object-cover rounded-t-md"
+                  placeholder="blur"
                 />
-                <div className="space-y-1 flex flex-col justify-center grow px-6">
-                  <h3 className="text-xl font-semibold flex items-center">
-                    High School{" "}
-                    <span className="ml-2">
-                      <ArrowUpRight />
-                    </span>
-                  </h3>
-                  <p className="text-sm font-light">Ages 14 - 17</p>
-                </div>
               </div>
             </Link>
+            <div className="space-y-1 flex flex-col justify-center grow px-6 bg-aisa-green py-3 rounded-b-md">
+              <h3 className="text-xl font-semibold flex items-center">
+                High School{" "}
+                <span className="ml-2">
+                  <ArrowUpRight />
+                </span>
+              </h3>
+              <p className="text-sm font-light">Ages 14 - 17</p>
+            </div>
           </li>
         </motion.ul>
         <ul className="margin-t-[50vh] margin-b-[100vh] relative items-center hidden lg:inline-block">
@@ -143,21 +134,21 @@ export default function Academics() {
             <Link href="/en/preschool">
               <div className="h-[400px] w-[350px] rounded-md bg-aisa-blue flex flex-col relative">
                 <Image
-                  src="/images/prep.jpg"
-                  width={320}
-                  height={300}
+                  src={prep}
+                  fill
                   alt="prep"
                   className="h-80 w-full object-cover rounded-t-md"
+                  placeholder="blur"
                 />
-                <div className="space-y-1 flex flex-col justify-center grow px-6">
-                  <h3 className="text-xl font-semibold flex items-center">
-                    Preschool{" "}
-                    <span className="ml-2">
-                      <ArrowUpRight />
-                    </span>
-                  </h3>
-                  <p className="text-sm font-light">Ages 3 - 6</p>
-                </div>
+              </div>
+              <div className="space-y-1 flex flex-col justify-center grow px-6 py-3 bg-aisa-blue rounded-b-md">
+                <h3 className="text-xl font-semibold flex items-center">
+                  Preschool{" "}
+                  <span className="ml-2">
+                    <ArrowUpRight />
+                  </span>
+                </h3>
+                <p className="text-sm font-light">Ages 3 - 6</p>
               </div>
             </Link>
           </li>
@@ -165,21 +156,21 @@ export default function Academics() {
             <Link href="/en/elementary-school">
               <div className="h-[400px] w-[350px] rounded-md bg-aisa-yellow flex flex-col relative">
                 <Image
-                  src="/images/primary.jpg"
-                  width={320}
-                  height={300}
+                  src={primary}
+                  fill
                   alt="prep"
                   className="h-80 w-full object-cover rounded-t-md"
+                  placeholder="blur"
                 />
-                <div className="space-y-1 flex flex-col justify-center grow px-6">
-                  <h3 className="text-xl font-semibold flex items-center">
-                    Primary School{" "}
-                    <span className="ml-2">
-                      <ArrowUpRight />
-                    </span>
-                  </h3>
-                  <p className="text-sm font-light">Ages 7 - 10</p>
-                </div>
+              </div>
+              <div className="space-y-1 flex flex-col justify-center grow px-6 py-3  bg-aisa-yellow rounded-b-md">
+                <h3 className="text-xl font-semibold flex items-center">
+                  Primary School{" "}
+                  <span className="ml-2">
+                    <ArrowUpRight />
+                  </span>
+                </h3>
+                <p className="text-sm font-light">Ages 7 - 10</p>
               </div>
             </Link>
           </li>
@@ -187,21 +178,21 @@ export default function Academics() {
             <Link href="/en/middle-school">
               <div className="h-[400px] w-[350px] rounded-md bg-aisa-red flex flex-col text-background relative">
                 <Image
-                  src="/images/middle.jpg"
-                  width={320}
-                  height={300}
+                  src={middle}
+                  fill
                   alt="prep"
                   className="h-80 w-full object-cover rounded-t-md"
+                  placeholder="blur"
                 />
-                <div className="space-y-1 flex flex-col justify-center grow px-6">
-                  <h3 className="text-xl font-semibold flex items-center">
-                    Middle School{" "}
-                    <span className="ml-2">
-                      <ArrowUpRight />
-                    </span>
-                  </h3>
-                  <p className="text-sm font-light">Ages 11 - 14</p>
-                </div>
+              </div>
+              <div className="space-y-1 flex flex-col justify-center grow px-6 py-3 bg-aisa-red rounded-b-md">
+                <h3 className="text-xl font-semibold flex items-center">
+                  Middle School{" "}
+                  <span className="ml-2">
+                    <ArrowUpRight />
+                  </span>
+                </h3>
+                <p className="text-sm font-light">Ages 11 - 14</p>
               </div>
             </Link>
           </li>
@@ -209,21 +200,21 @@ export default function Academics() {
             <Link href="/en/high-school">
               <div className="h-[400px] w-[350px] rounded-md bg-aisa-green flex flex-col text-background relative">
                 <Image
-                  src="/images/high.jpg"
-                  width={320}
-                  height={300}
+                  src={high}
+                  fill
                   alt="prep"
                   className="h-80 w-full object-cover rounded-t-md"
+                  placeholder="blur"
                 />
-                <div className="space-y-1 flex flex-col justify-center grow px-6">
-                  <h3 className="text-xl font-semibold flex items-center">
-                    High School{" "}
-                    <span className="ml-2">
-                      <ArrowUpRight />
-                    </span>
-                  </h3>
-                  <p className="text-sm font-light">Ages 14 - 17</p>
-                </div>
+              </div>
+              <div className="space-y-1 flex flex-col justify-center grow px-6 py-3 bg-aisa-green rounded-b-md">
+                <h3 className="text-xl font-semibold flex items-center">
+                  High School{" "}
+                  <span className="ml-2">
+                    <ArrowUpRight />
+                  </span>
+                </h3>
+                <p className="text-sm font-light">Ages 14 - 17</p>
               </div>
             </Link>
           </li>
