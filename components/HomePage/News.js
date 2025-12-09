@@ -43,7 +43,10 @@ export default function News({ news }) {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="space-x-10 hidden lg:flex py-10"
         >
-          <div className="w-1/2 flex flex-col space-y-5">
+          <Link
+            href={`/en/news/${firstNews.currentSlug}`}
+            className="w-1/2 flex flex-col space-y-5"
+          >
             <div>
               <Image
                 src={urlFor(firstNews.titleImage).width(1000).quality(80).url()}
@@ -67,11 +70,15 @@ export default function News({ news }) {
                 </button>
               </div>
             </div>
-          </div>
+          </Link>
           <div className="w-1/2 flex flex-col space-y-10">
             {news.slice(1).map((post, i) => {
               return (
-                <div key={i} className="flex space-x-2">
+                <Link
+                  href={`/en/news/${post.currentSlug}`}
+                  key={i}
+                  className="flex space-x-2"
+                >
                   <div className="w-1/3">
                     <Image
                       src={urlFor(post.titleImage)
@@ -97,7 +104,7 @@ export default function News({ news }) {
                       </button>
                     </div>
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>
@@ -140,13 +147,6 @@ export default function News({ news }) {
                       />
                     </div>
                     <div className="flex flex-col mt-2 mb-10">
-                      {/* <div className="py-2 flex justify-between">
-                        <span className="text-base text-gray-500">
-                          {" "}
-                          {post.date}
-                        </span>
-                      </div> */}
-
                       <h2 className="py-3 font-semibold text-2xl">
                         {" "}
                         {post.title}
@@ -160,6 +160,11 @@ export default function News({ news }) {
             </div>
           </section>
         </motion.div>
+        <div className="flex justify-center">
+          <Link href="/en/news" className="underline">
+            Check out all news
+          </Link>
+        </div>
       </div>
     </div>
   );
