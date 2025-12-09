@@ -12,17 +12,19 @@ export default function Hero({ title, subtitle, className, light }) {
         className
       )}
     >
-      <h1
-        className={`text-4xl lg:text-5xl font-serif mb-2 ${
-          light ? "text-foreground" : "text-background"
-        }`}
-      >
-        {title}
-      </h1>
+      {title !== "NewsDetails" && (
+        <h1
+          className={`text-4xl lg:text-5xl font-serif mb-2 ${
+            light ? "text-foreground" : "text-background"
+          }`}
+        >
+          {title}
+        </h1>
+      )}
       <p
-        className={`mb-4 text-2xl text-center font-serif ${
+        className={`mb-4 text-center font-serif px-6 ${
           light ? "text-foreground" : "text-background"
-        }`}
+        } ${title === "NewsDetails" ? "text-4xl" : "text-2xl"}`}
       >
         {subtitle}
       </p>
@@ -35,7 +37,13 @@ export default function Hero({ title, subtitle, className, light }) {
           Main Page
         </Link>
         <ChevronRight />
-        <span> {title}</span>
+        {title === "NewsDetails" ? (
+          <Link href="/en/news" className="font-bold">
+            Back to News
+          </Link>
+        ) : (
+          <span> {title}</span>
+        )}
       </div>
       <Image
         src="/pattern.png"
