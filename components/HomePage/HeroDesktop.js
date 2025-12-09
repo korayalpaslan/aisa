@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useAnimate, useScroll, useTransform, motion } from "motion/react";
 import Image from "next/image";
 
@@ -10,6 +10,7 @@ export default function HeroDesktop() {
     target: container,
     offset: ["start start", "end end"],
   });
+  const [loadedImages, setLoadedImages] = useState({});
 
   const scale3 = useTransform(scrollYProgress, [0, 1], [1, 3]);
   const scale4 = useTransform(scrollYProgress, [0, 1], [1, 4]);
@@ -161,17 +162,30 @@ export default function HeroDesktop() {
                       loop
                       muted
                       playsInline
+                      preload="none"
                       className="object-cover rounded-md w-full h-full"
                     />
                   ) : (
-                    <Image
-                      src={picture.src}
-                      fill
-                      alt="school-image"
-                      className="object-cover rounded-md"
-                      placeholder="blur"
-                      blurDataURL={`${picture.blur}`}
-                    />
+                    <div className="relative w-full h-full">
+                      {/* Blur background - STANDALONE */}
+                      <div
+                        className={`absolute inset-0 bg-cover bg-center blur-sm transition-opacity duration-300 rounded-md ${
+                          loadedImages[i] ? "opacity-0" : "opacity-100"
+                        }`}
+                        style={{ backgroundImage: `url(${picture.blur})` }}
+                      />
+
+                      {/* Image - SIBLING, NOT CHILD */}
+                      <Image
+                        src={picture.src}
+                        fill
+                        alt="school-image"
+                        className="object-cover rounded-md relative z-10"
+                        onLoad={() =>
+                          setLoadedImages((prev) => ({ ...prev, [i]: true }))
+                        }
+                      />
+                    </div>
                   )}
                 </div>
               </motion.div>

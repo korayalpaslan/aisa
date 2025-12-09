@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useAnimate, useScroll, useTransform, motion } from "motion/react";
 import Image from "next/image";
 
@@ -10,6 +10,7 @@ export default function HeroMobile() {
     target: container,
     offset: ["start start", "end end"],
   });
+  const [loadedImages, setLoadedImages] = useState({});
 
   const scale3 = useTransform(scrollYProgress, [0, 1], [1, 2]);
   const scale4 = useTransform(scrollYProgress, [0, 1], [1, 3]);
@@ -102,6 +103,7 @@ export default function HeroMobile() {
       left: "-42vw",
       width: "25vw",
       height: "35vh",
+      blur: "/images/7-blur.jpg",
     },
     {
       src: "/images/2.jpg",
@@ -110,6 +112,7 @@ export default function HeroMobile() {
       left: "42vw",
       width: "25vw",
       height: "35vh",
+      blur: "/images/2-blur.jpg",
     },
   ];
   return (
@@ -123,11 +126,6 @@ export default function HeroMobile() {
             Without Borders
           </div>
         </div>
-        {/* <div className="flex justify-center box-4 opacity-0 -translate-y-[150px]">
-          <button className="bg-aisa-yellow px-6 py-2 rounded-4xl font-semibold text-foreground text-sm hover:bg-yellow-500 duration-300 transition-all ease-in-out cursor-pointer">
-            Book a Campus Tour
-          </button>
-        </div> */}
       </div>
 
       <div
@@ -135,7 +133,7 @@ export default function HeroMobile() {
         ref={container}
       >
         <div className="sticky overflow-hidden h-screen top-0  flex justify-center items-start">
-          {pictures.map((picture) => {
+          {pictures.map((picture, i) => {
             return (
               <motion.div
                 className="flex justify-center items-center absolute top-0 h-full"
@@ -162,20 +160,24 @@ export default function HeroMobile() {
                       className="object-cover rounded-md w-full h-full"
                     />
                   ) : (
-                    <Image
-                      src={picture.src}
-                      fill
-                      alt="school-image"
-                      className="object-cover rounded-md"
-                    />
+                    <div className="relative w-full h-full">
+                      <div
+                        className={`absolute inset-0 bg-cover bg-center blur-sm transition-opacity duration-300 rounded-md ${
+                          loadedImages[i] ? "opacity-0" : "opacity-100"
+                        }`}
+                        style={{ backgroundImage: `url(${picture.blur})` }}
+                      />
+                      <Image
+                        src={picture.src}
+                        fill
+                        alt="school-image"
+                        className="object-cover rounded-md relative z-10"
+                        onLoad={() =>
+                          setLoadedImages((prev) => ({ ...prev, [i]: true }))
+                        }
+                      />
+                    </div>
                   )}
-
-                  {/* <Image
-                    src={picture.src}
-                    fill
-                    alt="school-image"
-                    className="object-cover rounded-md"
-                  /> */}
                 </div>
               </motion.div>
             );
