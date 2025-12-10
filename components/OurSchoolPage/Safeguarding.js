@@ -14,44 +14,40 @@ export default function SafaGuarding() {
           viewport={{ margin: "-100px 0px", once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h2 className="font-serif text-4xl lg:text-5xl">Safe Guarding</h2>
+          <h2 className="font-serif text-4xl lg:text-5xl">
+            Safeguarding & Security{" "}
+          </h2>
+          <h4 className="font-serif text-xl">
+            We believe that every child has a unique way of learning. Our
+            mission is to identify those strengths and support the challenges.
+            Whether your child needs extra support in English, has specific
+            learning needs, or requires advanced academic challenges, our
+            dedicated team ensures no student is left behind and no student is
+            held back.
+          </h4>
           <ul className="list-disc ml-5 space-y-6">
             <li>
-              <strong className="font-bold">Advanced Academic Program:</strong>{" "}
-              An enriched curriculum in science, mathematics, social studies,
-              and humanities that emphasizes analytical thinking and
-              problem-solving to prepare students for high school level courses.
+              <strong className="font-bold">Safer Recruitment:</strong> Every
+              teacher and staff member undergoes rigorous international
+              background checks and police clearance before joining AISA. We
+              hire only the most trusted professionals.
             </li>
             <li>
-              <strong className="font-bold">
-                Critical Thinking and Innovation:
-              </strong>{" "}
-              Interdisciplinary, project-based work and debate activities that
-              enable students to find creative solutions to complex problems.
+              <strong className="font-bold">Secure Campus:</strong> Our campus
+              is monitored 24/7 by professional security personnel and CCTV
+              systems. Entry is strictly controlled via ID cards and visitor
+              registration.
             </li>
             <li>
-              <strong className="font-bold">
-                Digital Citizenship and Media Literacy:
-              </strong>{" "}
-              Equipping students to become responsible members of the digital
-              world by teaching them to use technology consciously, ethically,
-              and effectively.
+              <strong className="font-bold">Zero-Tolerance Policy:</strong> We
+              have a strict anti-bullying and anti-discrimination policy. We
+              actively promote a culture of kindness, respect, and inclusion for
+              every student.
             </li>
             <li>
-              <strong className="font-bold">
-                Leadership and Community Service:
-              </strong>{" "}
-              Encouraging students to take initiative, learn teamwork, and make
-              a positive impact on society through student council, club
-              activities, and social responsibility projects.
-            </li>
-            <li>
-              <strong className="font-bold">
-                World Languages and Intercultural Communication:
-              </strong>{" "}
-              Providing a global perspective by enabling students to achieve
-              fluency in a second foreign language and gain a deep understanding
-              of different cultures.
+              <strong className="font-bold">Digital Safety:</strong> We protect
+              students online too. Our IT network filters inappropriate content,
+              and we educate students on responsible internet usage.
             </li>
           </ul>
         </motion.div>
