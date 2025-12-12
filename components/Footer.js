@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function Footer() {
@@ -29,30 +30,47 @@ export default function Footer() {
         <div className="w-full lg:w-3/4 flex flex-col item-center lg:flex-row lg:justify-around text-background">
           <div className="mt-20 text-sm text-center lg:text-start">
             <h4 className="font-semibold mb-4">QUICK LINKS</h4>
-            <ul className="font-thin space-y-2 text-gray-400">
-              <li>OUR SCHOOL</li>
-              <li>ADMISSIONS</li>
-              <li>STUDENT LIFE</li>
-              <li>LATEST NEWS</li>
-            </ul>
+            <div className="flex flex-col font-thin space-y-2 text-gray-400">
+              <Link href="/en/our-school">OUR SCHOOL</Link>
+              <Link href="/en/admission">ADMISSIONS</Link>
+              <Link href="/en/student-life">STUDENT LIFE</Link>
+              {/* <Link href="/en/news">LATEST NEWS</Link> */}
+            </div>
           </div>
           <div className="mt-20 text-sm  text-center lg:text-start">
             <h4 className="font-semibold mb-4">ACADEMICS</h4>
-            <ul className="font-thin space-y-2 text-gray-400">
-              <li>PREP SCHOOL</li>
-              <li>PRIMARY SCHOOL</li>
-              <li>MIDDLE SCHOOL</li>
-              <li>HIGH SCHOOL</li>
-            </ul>
+            <div className="flex flex-col font-thin space-y-2 text-gray-400">
+              <Link href="/en/preschool">PREP SCHOOL</Link>
+              <Link href="/en/elementary-school">ELEMENTARY SCHOOL</Link>
+              <Link href="/en/middle-school">MIDDLE SCHOOL</Link>
+              <Link href="/en/high-school">HIGH SCHOOL</Link>
+            </div>
           </div>
           <div className="mt-20 text-sm  text-center lg:text-start">
             <h4 className="font-semibold mb-4">SOCIAL MEDIA</h4>
-            <ul className="font-thin space-y-2 text-gray-400">
-              <li>INSTAGRAM</li>
-              <li>FACEBOOK</li>
-              <li>TELEGRAM</li>
-              <li>LINKEDIN</li>
-            </ul>
+            <div className="flex flex-col font-thin space-y-2 text-gray-400">
+              <Link href="https://www.instagram.com/aisalanya/" target="_blank">
+                INSTAGRAM
+              </Link>
+              <Link href="https://www.facebook.com/aisalanya" target="_blank">
+                FACEBOOK
+              </Link>
+              <Link
+                href="https://www.linkedin.com/company/aisalanya"
+                target="_blank"
+              >
+                LINKEDIN
+              </Link>
+              <Link
+                href="https://www.youtube.com/@alanyaInternationalschool"
+                target="_blank"
+              >
+                YOUTUBE
+              </Link>
+              <Link href="https://t.me/aisalanyachannel" target="_blank">
+                TELEGRAM
+              </Link>
+            </div>
           </div>
         </div>
       </div>

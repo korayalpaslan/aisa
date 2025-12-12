@@ -40,8 +40,8 @@ export default function Academics() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         >
-          <li className="w-full">
-            <Link href="/en/preschool" className="w-auto">
+          <Link className="w-full" href="/en/preschool">
+            <div className="w-auto">
               <div className="h-[350px] w-full rounded-md bg-aisa-blue flex flex-col relative">
                 <Image
                   src={prep}
@@ -51,7 +51,7 @@ export default function Academics() {
                   placeholder="blur"
                 />
               </div>
-            </Link>
+            </div>
             <div className="space-y-1 flex flex-col justify-center grow px-6 cursor-pointer bg-aisa-blue py-3 rounded-b-md">
               <h3 className="text-xl font-semibold flex items-center">
                 Preschool{" "}
@@ -61,9 +61,9 @@ export default function Academics() {
               </h3>
               <p className="text-sm font-light">Ages 3 - 6</p>
             </div>
-          </li>
-          <li className="w-full">
-            <Link href="/en/elementary-school" className="w-auto">
+          </Link>
+          <Link href="/en/elementary-school" className="w-full">
+            <div className="w-auto">
               <div className="h-[350px] w-full  rounded-md bg-aisa-yellow flex flex-col relative">
                 <Image
                   src={primary}
@@ -73,7 +73,7 @@ export default function Academics() {
                   placeholder="blur"
                 />
               </div>
-            </Link>
+            </div>
             <div className="space-y-1 flex flex-col justify-center grow px-6 bg-aisa-yellow py-3 rounded-b-md">
               <h3 className="text-xl font-semibold flex items-center">
                 Primary School{" "}
@@ -83,9 +83,9 @@ export default function Academics() {
               </h3>
               <p className="text-sm font-light">Ages 7 - 10</p>
             </div>
-          </li>
-          <li className="w-full">
-            <Link href="/en/middle-school" className="w-auto">
+          </Link>
+          <Link href="/en/middle-school" className="w-full">
+            <div className="w-auto">
               <div className="h-[350px] w-full rounded-md bg-aisa-red flex flex-col relative">
                 <Image
                   src={middle}
@@ -95,7 +95,7 @@ export default function Academics() {
                   placeholder="blur"
                 />
               </div>
-            </Link>
+            </div>
             <div className="space-y-1 flex flex-col justify-center grow px-6 bg-aisa-red py-3 rounded-b-md">
               <h3 className="text-xl font-semibold flex items-center">
                 Middle School{" "}
@@ -105,9 +105,9 @@ export default function Academics() {
               </h3>
               <p className="text-sm font-light">Ages 11 - 14</p>
             </div>
-          </li>
-          <li className="w-full">
-            <Link href="/en/high-school" className="w-auto">
+          </Link>
+          <Link href="/en/high-school" className="w-full">
+            <div className="w-auto">
               <div className="h-[350px] w-full rounded-md bg-aisa-green flex flex-col relative">
                 <Image
                   src={high}
@@ -117,7 +117,7 @@ export default function Academics() {
                   placeholder="blur"
                 />
               </div>
-            </Link>
+            </div>
             <div className="space-y-1 flex flex-col justify-center grow px-6 bg-aisa-green py-3 rounded-b-md">
               <h3 className="text-xl font-semibold flex items-center">
                 High School{" "}
@@ -127,7 +127,7 @@ export default function Academics() {
               </h3>
               <p className="text-sm font-light">Ages 14 - 17</p>
             </div>
-          </li>
+          </Link>
         </motion.ul>
         <ul className="margin-t-[50vh] margin-b-[100vh] relative items-center hidden lg:inline-block">
           <li className="h-[50vh] w-auto flex items-center sticky top-48 z-10">

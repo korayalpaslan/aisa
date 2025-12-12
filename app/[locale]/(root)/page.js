@@ -36,12 +36,13 @@ export default async function Home() {
       <HeroDesktop />
       <Intro />
       <Academics />
-      <Welcome />
+
       <Features />
-      <Testimonials />
-      <Cta />
-      <News news={news} />
-      <Explore />
+      <Welcome />
+      {/* <Testimonials /> */}
+      {/* <Cta /> */}
+      {/* <News news={news} /> */}
+      {/* <Explore /> */}
     </div>
   );
 }
