@@ -62,12 +62,12 @@ export default function FormContainer() {
     const result = await sendAdmissionForm(data);
     console.log(result);
 
-    // if (result?.success) {
-    //   form.reset();
-    //   window.location.href = "/en/admission/thankyou";
-    // } else {
-    //   window.location.href = "/en/admission/trylater";
-    // }
+    if (result?.success) {
+      // form.reset();
+      window.location.href = "/en/admission/thankyou";
+    } else {
+      window.location.href = "/en/admission/trylater";
+    }
   };
   return (
     <div className="pb-20">
