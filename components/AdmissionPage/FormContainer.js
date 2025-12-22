@@ -38,7 +38,7 @@ const schema = z.object({
 });
 
 export default function FormContainer() {
-  const [open, setOpen] = useState();
+  const [open, setOpen] = useState(false);
   const [date, setDate] = useState();
   const {
     register,
@@ -60,13 +60,14 @@ export default function FormContainer() {
 
   const onSubmit = async (data) => {
     const result = await sendAdmissionForm(data);
+    console.log(result);
 
-    if (result?.success) {
-      form.reset();
-      window.location.href = "/en/admission/thankyou";
-    } else {
-      window.location.href = "/en/admission/trylater";
-    }
+    // if (result?.success) {
+    //   form.reset();
+    //   window.location.href = "/en/admission/thankyou";
+    // } else {
+    //   window.location.href = "/en/admission/trylater";
+    // }
   };
   return (
     <div className="pb-20">

@@ -28,6 +28,6 @@ export async function sendAdmissionForm(application) {
     }
     return { success: true };
   } catch (error) {
-    return { sucess: false, error };
+    return { success: false, error };
   }
 }
