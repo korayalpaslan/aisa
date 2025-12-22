@@ -6,6 +6,7 @@ import { localizedDate } from "@/lib/localizedDate";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function sendAdmissionForm(application) {
+  const formattedDate = new Date(application.date).toLocaleDateString("tr-TR");
   try {
     const { data, error } = await resend.emails.send({
       from: "AISA <no-reply@aisalanya.com>",
@@ -16,7 +17,7 @@ export async function sendAdmissionForm(application) {
         fullname: application.name,
         phone: application.phone,
         email: application.email,
-        date: localizedDate(application.date),
+        date: formattedDate,
         nationality: application.nationality,
         location: application.location,
         comment: application.comment,
