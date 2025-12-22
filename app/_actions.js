@@ -1,19 +1,11 @@
 "use server";
-import { formSchema } from "@/lib/validators";
 import { Resend } from "resend";
 import { EmailTemplate } from "@/email/email-template";
-import moment from "moment";
-import "moment/locale/tr";
-
-export const localizedDate = (date) => {
-  return moment(date).locale("tr").format("Do MMMM YYYY");
-};
+import { localizedDate } from "@/lib/localizedDate";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function sendAdmissionForm(data) {
-  const application = formSchema.parse(data);
-
+export async function sendAdmissionForm(application) {
   try {
     const { data, error } = await resend.emails.send({
       from: "AISA <no-reply@aisalanya.com>",
