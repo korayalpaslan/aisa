@@ -1,7 +1,7 @@
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { Manrope, Cormorant_Garamond } from "next/font/google";
-
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -34,6 +34,7 @@ export default async function RootLayout({ children }) {
           {children}
           <Footer />
         </body>
+        <GoogleAnalytics gaId="G-ZBRDZJ1LPT" />
       </html>
     </NextIntlClientProvider>
   );
