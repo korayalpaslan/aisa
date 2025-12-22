@@ -13,15 +13,8 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+
+import { sendAdmissionForm } from "@/app/_actions";
 
 const phoneRegex = new RegExp(
   /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/
@@ -66,15 +59,15 @@ export default function FormContainer() {
   });
 
   const onSubmit = async (data) => {
-    // try {
-    //   await new Promise((resolve) => setTimeout(resolve, 1000));
-    //   console.log(data);
-    // } catch (error) {
-    //   setError("root", {
-    //     message: "Something went wrong",
-    //   });
-    // }
-    console.log(data);
+    const result = await sendAdmissionForm(data);
+    console.log(result);
+
+    if (result?.success) {
+      form.reset();
+      window.location.href = "/en/admission/thankyou";
+    } else {
+      window.location.href = "/en/admission/trylater";
+    }
   };
   return (
     <div className="pb-20">

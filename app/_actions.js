@@ -16,8 +16,8 @@ export async function sendAdmissionForm(data) {
 
   try {
     const { data, error } = await resend.emails.send({
-      from: "AISA <gogusto@gogusto.net>",
-      to: ["gogusto@gogusto.net"],
+      from: "AISA <no-reply@aisalanya.com>",
+      to: ["info@aisalanya.com"],
       subject: "Başvuru",
       text: "Yeni Öğrenci Başvurusu",
       react: EmailTemplate({
