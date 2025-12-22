@@ -60,7 +60,6 @@ export default function FormContainer() {
 
   const onSubmit = async (data) => {
     const result = await sendAdmissionForm(data);
-    console.log(result);
 
     if (result?.success) {
       form.reset();

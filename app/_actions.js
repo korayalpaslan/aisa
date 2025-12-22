@@ -13,7 +13,7 @@ export async function sendAdmissionForm(application) {
       subject: "Başvuru",
       text: "Yeni Öğrenci Başvurusu",
       react: EmailTemplate({
-        fullname: application.fullname,
+        fullname: application.name,
         phone: application.phone,
         email: application.email,
         date: localizedDate(application.date),
@@ -23,6 +23,7 @@ export async function sendAdmissionForm(application) {
       }),
     });
     if (error) {
+      console.error("Resend error:", error); // Add logging
       return { success: false, error };
     }
     return { success: true };
