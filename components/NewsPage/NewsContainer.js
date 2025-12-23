@@ -18,7 +18,7 @@ export default function NewsContainer({ news }) {
                 className={`w-full ${index === 0 ? "md:col-span-3 md:flex md:space-x-10" : ""}`}
               >
                 <div
-                  className={`${index === 0 ? "md:min-w-1/2 md:h-[400px]" : ""} h-[250px]overflow-hidden flex`}
+                  className={`${index === 0 ? "md:min-w-1/2 md:h-[400px]" : ""} h-[250px]   flex overflow-hidden `}
                 >
                   <Image
                     src={urlFor(post.titleImage).width(1000).quality(80).url()}

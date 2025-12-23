@@ -77,7 +77,7 @@ export default function News({ news }) {
                 <Link
                   href={`/en/news/${post.currentSlug}`}
                   key={i}
-                  className="flex space-x-2"
+                  className="flex space-x-4"
                 >
                   <div className="w-1/3">
                     <Image
@@ -88,7 +88,7 @@ export default function News({ news }) {
                       width={500}
                       height={500}
                       alt="news"
-                      className="w-full object-cover rounded-md"
+                      className="w-full object-cover rounded-md h-[130px]"
                     />
                   </div>
                   <div className="flex-1 flex flex-col">
@@ -96,7 +96,9 @@ export default function News({ news }) {
                       {" "}
                       {localizedDate(post.newsDate)}
                     </p>
-                    <h2 className="font-semibold md:w-2/3">{post.title}</h2>
+                    <h2 className="font-semibold md:w-2/3 text-sm">
+                      {post.title}
+                    </h2>
                     <div className="mt-4 text-sm">
                       <button className="flex items-center space-x-1">
                         <span>Read More </span>

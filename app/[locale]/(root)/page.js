@@ -15,13 +15,16 @@ import { client } from "@/lib/sanity";
 export const revalidate = 30;
 
 async function getNews() {
-  const query = `*[_type== 'news'] | order(_createdAt desc)[0...4] {
-  title,
-  "currentSlug":slug.current,
-  titleImage,
-  description,
-  newsDate
-}`;
+  const query = `
+    *[_type == "news" && defined(newsDate)]
+    | order(newsDate desc)[0...4] {
+      title,
+      "currentSlug": slug.current,
+      titleImage,
+      description,
+      newsDate
+    }
+  `;
 
   const data = await client.fetch(query);
   return data;
@@ -41,7 +44,7 @@ export default async function Home() {
       <Welcome />
       {/* <Testimonials /> */}
       {/* <Cta /> */}
-      {/* <News news={news} /> */}
+      <News news={news} />
       {/* <Explore /> */}
     </div>
   );
