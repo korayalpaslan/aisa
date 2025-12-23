@@ -45,7 +45,7 @@ export default async function Home() {
       {/* <Testimonials /> */}
       <Cta />
       <News news={news} />
-      {/* <Explore /> */}
+      <Explore />
     </div>
   );
 }
