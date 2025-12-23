@@ -43,7 +43,7 @@ export default async function Home() {
       <Features />
       <Welcome />
       {/* <Testimonials /> */}
-      {/* <Cta /> */}
+      <Cta />
       <News news={news} />
       {/* <Explore /> */}
     </div>

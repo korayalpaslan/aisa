@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function Cta() {
@@ -16,9 +17,12 @@ export default function Cta() {
           </div>
 
           <div className="flex justify-center lg:justify-end">
-            <button className="bg-aisa-yellow px-6 py-2 rounded-4xl font-semibold text-foreground text-sm hover:bg-yellow-500 duration-300 transition-all ease-in-out cursor-pointer">
+            <Link
+              href="/en/admission"
+              className="bg-aisa-yellow px-6 py-2 rounded-4xl font-semibold text-foreground text-sm hover:bg-yellow-500 duration-300 transition-all ease-in-out cursor-pointer"
+            >
               Get in touch
-            </button>
+            </Link>
           </div>
         </div>
       </div>
