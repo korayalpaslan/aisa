@@ -80,7 +80,7 @@ const Campus = () => {
                       alt="testimonial-videos"
                       className="h-full w-full object-cover"
                     />
-                    <div className="group/parent bg-foreground/50 hover:bg-foreground/20 transition-all duration-500 absolute top-0 left-0 right-0 bottom-0  text-background cursor-pointer">
+                    <div className="group/parent bg-foreground/0 hover:bg-foreground/20 transition-all duration-500 absolute top-0 left-0 right-0 bottom-0  text-background cursor-pointer">
                       <div className="group/child translate-y-28 hover:translate-y-0 transition-all duration-500 h-full w-full flex flex-col justify-end"></div>
                     </div>
                   </div>
