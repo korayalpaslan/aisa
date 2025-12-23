@@ -18,7 +18,7 @@ export default function OurSchoolPage() {
 
       <SchoolIntro />
       <Why />
-      {/* <CampusContainer /> */}
+      <CampusContainer />
       <Facilities />
       <Philosophy />
       <SafeGuarding />

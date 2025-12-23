@@ -10,28 +10,36 @@ import {
 
 const data = [
   {
-    src: "/images/images.png",
+    src: "/images/ourschool/facilities/1.jpg",
+    title: "Science Lab",
+  },
+  {
+    src: "/images/ourschool/facilities/2.jpg",
+    title: "Outdoor Sport Areas",
+  },
+  {
+    src: "/images/ourschool/facilities/3.jpg",
+    title: "Conference Hall",
+  },
+  {
+    src: "/images/ourschool/facilities/4.jpg",
+    title: "Indoor Sport Center",
+  },
+  {
+    src: "/images/ourschool/facilities/5.jpg",
+    title: "Art Studio",
+  },
+  {
+    src: "/images/ourschool/facilities/6.jpg",
     title: "Library",
   },
   {
-    src: "/images/images.png",
-    title: "Sport Center",
+    src: "/images/ourschool/facilities/7.jpg",
+    title: "Music Hall",
   },
   {
-    src: "/images/images.png",
+    src: "/images/ourschool/facilities/8.jpg",
     title: "Classrooms",
-  },
-  {
-    src: "/images/images.png",
-    title: "Dinning Area",
-  },
-  {
-    src: "/images/images.png",
-    title: "Classrooms",
-  },
-  {
-    src: "/images/images.png",
-    title: "Sport Center",
   },
 ];
 const Campus = () => {

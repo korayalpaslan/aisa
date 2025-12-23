@@ -21,9 +21,10 @@ export default function Footer() {
           </div>
           <div className="order-3 flex flex-col space-y-2 text-gray-400 text-center lg:text-start">
             <p className="text-sm">
-              Oba Mah. Alanya International School No:2 Alanya / Antalya
+              Oba Mah. Alanya International School No:2 <br></br> Alanya /
+              Antalya
             </p>
-            <p className="text-sm">amerikankulturkolejialanya@gmail.com</p>
+            <p className="text-sm">info@aisalanya.com</p>
             <p className="text-sm">+90 531 885 85 09</p>
           </div>
         </div>
