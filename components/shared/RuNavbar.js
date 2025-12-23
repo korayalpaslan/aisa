@@ -122,7 +122,7 @@ export default function RuNavbar() {
         initial="close"
       >
         <div className="h-screen w-full flex flex-col">
-          <div className="font-serif text-2xl lg:text-5xl text-background px-10 lg:p-20 flex-1 mt-24">
+          <div className="font-serif text-2xl lg:text-5xl text-background px-10 lg:p-20 flex-1 mt-0">
             <ul className="space-y-5 lg:space-y-10 pb-5 flex flex-col ">
               <li
                 onClick={() => navigateAfterClose("/")}
@@ -148,12 +148,12 @@ export default function RuNavbar() {
               >
                 <span>Student Life</span>
               </li>
-              {/* <li
+              <li
                 onClick={() => navigateAfterClose("/en/news")}
                 className="cursor-pointer"
               >
                 <span> Latest News</span>
-              </li> */}
+              </li>
             </ul>
             <ul className="mt-5 py-10 border-t border-t-gray-500 flex flex-col space-y-5 lg:space-y-10">
               <li
