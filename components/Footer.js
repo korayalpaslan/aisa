@@ -25,7 +25,7 @@ export default function Footer() {
               Antalya
             </p>
             <p className="text-sm">info@aisalanya.com</p>
-            <p className="text-sm">+90 531 885 85 09</p>
+            <p className="text-sm">+90 506 297 55 35</p>
           </div>
         </div>
         <div className="w-full lg:w-3/4 flex flex-col item-center lg:flex-row lg:justify-around text-background">

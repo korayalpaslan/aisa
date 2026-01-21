@@ -5,9 +5,10 @@ import {schemaTypes} from './schemaTypes'
 
 export default defineConfig({
   name: 'default',
-  title: 'aisa blog',
+  title: 'aisa',
 
-  projectId: '4lcwndcn',
+  // projectId: '4lcwndcn',
+  projectId: 'qoifg23z',
   dataset: 'production',
 
   plugins: [structureTool(), visionTool()],
