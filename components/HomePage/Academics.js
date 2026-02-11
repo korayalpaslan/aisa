@@ -15,7 +15,7 @@ export default function Academics() {
   return (
     <div className="bg-foreground text-background py-20">
       <div className="wrapper" ref={ref}>
-        <div className="lg:h-[50vh] lg:sticky lg:top-16 lg:mb-36 mb-16">
+        <div className="lg:h-[50vh] lg:sticky lg:top-36 lg:mb-36 mb-16">
           <motion.h1
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -130,7 +130,7 @@ export default function Academics() {
           </Link>
         </motion.ul>
         <ul className="margin-t-[50vh] margin-b-[100vh] relative items-center hidden lg:inline-block">
-          <li className="h-[50vh] w-auto flex items-center sticky top-48 z-10">
+          <li className="h-[50vh] w-auto flex items-center sticky top-64 z-0">
             <Link href="/en/preschool">
               <div className="h-[400px] w-[350px] rounded-md bg-aisa-blue flex flex-col relative">
                 <Image
@@ -152,7 +152,7 @@ export default function Academics() {
               </div>
             </Link>
           </li>
-          <li className="h-[50vh] lg:translate-x-[275px] w-auto flex items-center sticky top-56 z-20">
+          <li className="h-[50vh] lg:translate-x-[275px] w-auto flex items-center sticky top-72 z-0">
             <Link href="/en/elementary-school">
               <div className="h-[400px] w-[350px] rounded-md bg-aisa-yellow flex flex-col relative">
                 <Image
@@ -174,7 +174,7 @@ export default function Academics() {
               </div>
             </Link>
           </li>
-          <li className="h-[50vh] lg:translate-x-[550px] w-auto flex items-center sticky top-64 z-30">
+          <li className="h-[50vh] lg:translate-x-[550px] w-auto flex items-center sticky top-80 z-10">
             <Link href="/en/middle-school">
               <div className="h-[400px] w-[350px] rounded-md bg-aisa-red flex flex-col text-background relative">
                 <Image
@@ -196,7 +196,7 @@ export default function Academics() {
               </div>
             </Link>
           </li>
-          <li className="h-[50vh] lg:translate-x-[825px] w-auto flex items-center sticky top-72 cursor-pointer z-40">
+          <li className="h-[50vh] lg:translate-x-[825px] w-auto flex items-center sticky top-88 cursor-pointer z-20">
             <Link href="/en/high-school">
               <div className="h-[400px] w-[350px] rounded-md bg-aisa-green flex flex-col text-background relative">
                 <Image

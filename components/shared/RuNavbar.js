@@ -69,7 +69,7 @@ export default function RuNavbar() {
   }, [animate]);
   return (
     <div ref={scope}>
-      <div className="box-1 opacity-0 px-6 flex justify-between items-center h-24 absolute w-full z-9998">
+      <div className="box-1 opacity-0 px-6 flex justify-between items-center h-24 absolute w-full z-40 fixed w-full">
         <Link href="/">
           <Image
             src="/images/01.png"
@@ -81,7 +81,14 @@ export default function RuNavbar() {
             }`}
           />
         </Link>
-
+        <div className="ml-auto -translate-x-1/3 hidden lg:block">
+          <Link
+            href="/en/admission"
+            className="bg-aisa-yellow px-6 py-2 rounded-4xl font-semibold text-foreground  hover:bg-yellow-500 duration-300 transition-all ease-in-out cursor-pointer"
+          >
+            Apply For Admission
+          </Link>
+        </div>
         <div>
           <button
             className="h-12 w-12 rounded-full bg-white flex items-center justify-center cursor-pointer absolute z-30 right-6 top-6"
@@ -114,14 +121,14 @@ export default function RuNavbar() {
         </div>
       </div>
       <motion.div
-        className={`absolute top-0 right-0 origin-top-right overflow-hidden ${
+        className={`fixed top-0 right-0 origin-top-right overflow-hidden ${
           isOpen ? "z-20 bg-foreground opacity-100" : "-z-10 opacity-0"
         }`}
         variants={variants}
         animate={isOpen ? "open" : "close"}
         initial="close"
       >
-        <div className="h-screen w-full flex flex-col">
+        <div className="h-screen w-full flex flex-col pt-20 md:pt-0">
           <div className="font-serif text-2xl lg:text-5xl text-background px-10 lg:p-20 flex-1 mt-0">
             <ul className="space-y-5 lg:space-y-10 pb-5 flex flex-col ">
               <li

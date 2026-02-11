@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useAnimate, useScroll, useTransform, motion } from "motion/react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HeroDesktop() {
   const [scope, animate] = useAnimate();

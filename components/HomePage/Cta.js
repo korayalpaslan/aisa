@@ -19,9 +19,9 @@ export default function Cta() {
           <div className="flex justify-center lg:justify-end">
             <Link
               href="/en/admission"
-              className="bg-aisa-yellow px-6 py-2 rounded-4xl font-semibold text-foreground text-sm hover:bg-yellow-500 duration-300 transition-all ease-in-out cursor-pointer"
+              className="bg-aisa-yellow px-6 py-2 rounded-4xl font-semibold text-foreground  hover:bg-yellow-500 duration-300 transition-all ease-in-out cursor-pointer"
             >
-              Get in touch
+              Apply For Admission
             </Link>
           </div>
         </div>

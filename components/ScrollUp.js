@@ -23,8 +23,8 @@ const ScrollUp = () => {
     <div>
       {showArrow && (
         <div className="flex flex-col space-y-4">
-          {/* <div className="fixed z-50 h-10 w-10 bottom-20 right-32 cursor-pointer text-slate-50 bg-red-500 rounded-full flex flex-col justify-center items-center">
-            <Link href="/">
+          <div className="fixed z-50 h-10 w-10 bottom-16 right-10 cursor-pointer text-slate-50 bg-red-500 rounded-full flex flex-col justify-center items-center">
+            <Link href="https://wa.me/+905062975535">
               <Image
                 src="/images/whatsapp.png"
                 height={40}
@@ -32,7 +32,7 @@ const ScrollUp = () => {
                 alt="Whatsapp"
               />
             </Link>
-          </div> */}
+          </div>
           <div className="fixed z-50 h-10 w-10 bottom-5 right-10 cursor-pointer text-slate-50 bg-aisa-blue rounded-full flex flex-col justify-center items-center">
             <ArrowUp onClick={scrollToTopHandler} />
           </div>

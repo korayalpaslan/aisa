@@ -4,14 +4,25 @@ import React, { useEffect, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { useAnimate, motion, AnimatePresence } from "motion/react";
 import { Menu, X } from "lucide-react";
-import ScrollUp from "./ScrollUp";
+import ScrollUp from "@/components/ScrollUp";
+import Link from "next/link";
 
-export default function Navbar() {
+export default function RuNavbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scope, animate] = useAnimate();
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
+  const [isSticky, setIsSticky] = useState(false);
+  useEffect(() => {
+    document.addEventListener("scroll", () => {
+      if (window.scrollY > 2000) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    });
+  }, [isSticky]);
 
   // HIDE loading overlay when route changes finish
   useEffect(() => {
@@ -19,12 +30,18 @@ export default function Navbar() {
   }, [pathname]);
 
   function navigateAfterClose(href) {
-    setIsOpen(false); // start closing animation
-    setIsLoading(true); // show loading overlay immediately
+    // If user is already on this page, just close the menu
+    if (href === pathname) {
+      setIsOpen(false);
+      return;
+    }
+
+    setIsOpen(false);
+    setIsLoading(true);
 
     setTimeout(() => {
       router.push(href);
-    }, 220); // match your menu close duration
+    }, 220);
   }
 
   const variants = {
@@ -58,26 +75,36 @@ export default function Navbar() {
   }, [isOpen]);
 
   useEffect(() => {
-    animate(
-      ".box-1",
-      { opacity: [0, 1] },
-      { duration: 0.8, ease: "easeOut", delay: 2 }
-    );
+    animate(".box-1", { opacity: [0, 1] }, { duration: 0.1, ease: "easeOut" });
   }, [animate]);
   return (
     <div ref={scope}>
-      <div className="box-1 opacity-0 px-6 flex justify-between items-center h-24 relative">
-        <Image
-          src="/images/02.png"
-          width={250}
-          height={250}
-          alt="logo"
-          className="object-cover w-[200px] lg:w-[250px]"
-        />
+      <div
+        className={`box-1 opacity-0 px-6 flex justify-between items-center h-24 absolute w-full z-40 fixed w-full`}
+      >
+        <Link href="/">
+          <Image
+            src={`${isSticky ? "/images/01.png" : "/images/02.png"}`}
+            width={250}
+            height={250}
+            alt="logo"
+            className={`object-cover w-[200px] lg:w-[250px] ${
+              isOpen ? "hidden" : ""
+            }`}
+          />
+        </Link>
+        <div className="ml-auto -translate-x-1/3 hidden lg:block">
+          <Link
+            href="/en/admission"
+            className="bg-aisa-yellow px-6 py-2 rounded-4xl font-semibold text-foreground  hover:bg-yellow-500 duration-300 transition-all ease-in-out cursor-pointer"
+          >
+            Apply For Admission
+          </Link>
+        </div>
 
         <div>
           <button
-            className="h-12 w-12 rounded-full bg-foreground flex items-center justify-center cursor-pointer absolute z-30 right-6 top-6"
+            className="h-12 w-12 rounded-full bg-white flex items-center justify-center cursor-pointer absolute z-30 right-6 top-6"
             onClick={() => setIsOpen((s) => !s)}
           >
             <AnimatePresence mode="wait" initial={false}>
@@ -89,7 +116,7 @@ export default function Navbar() {
                   exit={{ opacity: 0, rotate: 90, scale: 0.5 }}
                   transition={{ duration: 0.25 }}
                 >
-                  <X className="text-white" />
+                  <X className="text-foreground" />
                 </motion.div>
               ) : (
                 <motion.div
@@ -99,7 +126,7 @@ export default function Navbar() {
                   exit={{ opacity: 0, rotate: -90, scale: 0.5 }}
                   transition={{ duration: 0.25 }}
                 >
-                  <Menu className="text-white" />
+                  <Menu className="text-foreground" />
                 </motion.div>
               )}
             </AnimatePresence>
@@ -107,16 +134,22 @@ export default function Navbar() {
         </div>
       </div>
       <motion.div
-        className={`absolute top-0 right-0 origin-top-right overflow-hidden ${
+        className={`fixed top-0 right-0 origin-top-right overflow-hidden ${
           isOpen ? "z-20 bg-foreground opacity-100" : "-z-10 opacity-0"
         }`}
         variants={variants}
         animate={isOpen ? "open" : "close"}
         initial="close"
       >
-        <div className="h-screen w-full flex flex-col">
-          <div className="font-serif text-2xl lg:text-5xl text-background px-10 lg:p-20 flex-1 mt-10">
+        <div className="h-screen w-full flex flex-col pt-20 md:pt-0">
+          <div className="font-serif text-2xl lg:text-5xl text-background px-10 lg:p-20 flex-1 mt-0">
             <ul className="space-y-5 lg:space-y-10 pb-5 flex flex-col ">
+              <li
+                onClick={() => navigateAfterClose("/")}
+                className="cursor-pointer"
+              >
+                <span> Main Page</span>
+              </li>
               <li
                 onClick={() => navigateAfterClose("/en/our-school")}
                 className="cursor-pointer"

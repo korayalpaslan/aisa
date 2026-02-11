@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useAnimate, useScroll, useTransform, motion } from "motion/react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HeroMobile() {
   const [scope, animate] = useAnimate();
@@ -71,6 +72,11 @@ export default function HeroMobile() {
           { y: 0, opacity: [0, 1] },
           { duration: 0.8, ease: "easeOut", delay: 0.2 },
         ],
+        [
+          ".box-6",
+          { y: 0, opacity: [0, 1] },
+          { duration: 0.8, ease: "easeOut", delay: 0.2 },
+        ],
       ]);
     };
 
@@ -124,6 +130,14 @@ export default function HeroMobile() {
           </div>
           <div className="box-2 opacity-0 translate-x-[50px] text-aisa-blue text-4xl font-serif text-center">
             Without Borders
+          </div>
+          <div className="inline-block mx-auto mt-6 opacity-0 box-4">
+            <Link
+              href="/en/admission"
+              className="bg-aisa-yellow px-6 py-2 rounded-4xl font-semibold text-foreground  hover:bg-yellow-500 duration-300 transition-all ease-in-out cursor-pointer"
+            >
+              Apply For Admission
+            </Link>
           </div>
         </div>
       </div>
