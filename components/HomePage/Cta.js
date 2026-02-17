@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Cta() {
   return (
-    <div className="bg-foreground py-20 text-background">
+    <div className="bg-foreground py-20 text-background dar">
       <div className="wrapper">
         <div className="flex flex-col lg:flex-row lg:justify-between items- lg:items-start space-y-10 lg:space-y-0">
           <div className="space-y-5">
