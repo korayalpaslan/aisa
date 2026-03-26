@@ -1,4 +1,5 @@
 import Curriculum from "@/components/ElementarySchoolPage/Curriculum";
+import Cta from "@/components/HomePage/Cta";
 import Hero from "@/components/shared/Hero";
 import Intro from "@/components/shared/Intro";
 import React from "react";
