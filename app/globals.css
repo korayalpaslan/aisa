@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import "../../styles/embla-blog.css";
+@import "../styles/embla-blog.css";
 
 :root {
   --background: #f7f4ed;

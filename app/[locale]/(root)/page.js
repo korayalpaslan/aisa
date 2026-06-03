@@ -32,19 +32,18 @@ async function getNews() {
 
 export default async function Home() {
   const locale = await getLocale();
-  const news = await getNews();
+  // const news = await getNews();
   return (
     <div className="w-full">
       <HeroMobile />
       <HeroDesktop />
       <Intro />
       <Academics />
-
       <Features />
       <Welcome />
       {/* <Testimonials /> */}
       <Cta />
-      <News news={news} />
+      {/* <News news={news} /> */}
       <Explore />
     </div>
   );
